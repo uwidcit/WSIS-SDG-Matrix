@@ -5,7 +5,7 @@ export class Action {
     name: string;
     desc: string;
     rationales : string[];
-    sdgs: SDG[];
+    goals: SDG[];
     iconUrl: string;
     
     constructor(id: number, name: string, iconUrl: string) {
@@ -14,6 +14,6 @@ export class Action {
         this.iconUrl = iconUrl;
         this.rationales = [];
         this.desc = "";
-        this.sdgs = [];
+        this.goals = [];
     }
 }

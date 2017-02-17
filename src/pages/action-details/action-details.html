@@ -12,4 +12,13 @@
     <p>
         {{ action.desc }}
     </p>
+    <h3>Related SDGs</h3>
+    <ion-list>
+      <ion-item *ngFor="let goal of action.goals" (click)="goalTapped($event, goal)">
+        <ion-thumbnail item-left>
+            <img src="{{ goal.iconUrl }}"/>
+        </ion-thumbnail>
+        <h2>{{ goal.name }}</h2>
+      </ion-item>
+    </ion-list>
 </ion-content>
