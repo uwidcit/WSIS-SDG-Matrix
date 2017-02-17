@@ -3,17 +3,18 @@ import {NavController, NavParams} from 'ionic-angular';
 
 import { ActionPage } from '../action-details/action-details';
 import { Action } from '../action-details/action';
+import { ActionService } from '../../services/action.service';
 
 @Component({
-  selector: 'page-action-list',
-  templateUrl: 'action-list.html'
+    selector: 'page-action-list',
+    templateUrl: 'action-list.html',
+    providers: [ActionService]
 })
 export class ActionListPage {
-    actions: Action[];
+    actions;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams) {
-        this.actions = [new Action(1, "hello", "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/2-min.png"),
-                           new Action(2, "another", "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png")];
+    constructor(public navCtrl: NavController, public navParams: NavParams, public actionService: ActionService) {
+        this.actions = actionService.getActions();
         
     }
     
