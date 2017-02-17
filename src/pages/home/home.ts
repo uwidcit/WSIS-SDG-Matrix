@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { SDGListPage } from '../sdg-list/sdg-list';
-import { ActionPage } from '../action-details/action-details';
+import { ActionListPage } from '../action-list/action-list';
 
 @Component({
   selector: 'page-home',
@@ -19,7 +19,7 @@ export class HomePage {
     }
     
     showActions(event){
-        this.navCtrl.push(ActionPage);
+        this.navCtrl.push(ActionListPage);
     }
 
 }
