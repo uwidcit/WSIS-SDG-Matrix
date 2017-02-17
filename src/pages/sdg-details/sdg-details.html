@@ -1,0 +1,26 @@
+<ion-header>
+<ion-navbar>
+    <ion-title>
+        Sustainable Development Goals
+    </ion-title>
+</ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-img width="100%" height="40%" src="{{ sdg.photoUrl }}"></ion-img>
+    <div padding>
+        <h1>{{ sdg.name }}</h1>
+        <p>
+            {{ sdg. desc }}
+        </p>
+        <h3>Action Lines</h3>
+        <ion-list>
+          <ion-item *ngFor="let action of sdg.actions" (click)="actionTapped($event, action)">
+            <ion-thumbnail item-left>
+                <img src="{{ action.iconUrl }}"/>
+            </ion-thumbnail>
+            <h2>{{ action.name }}</h2>
+          </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
