@@ -13,10 +13,15 @@ import { GoalService } from '../../services/goal.service';
 })
 export class SDGListPage {
     
-    goals;
+    goals: SDG[];
+    errorMessage: string;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, public goalService : GoalService) {        
-        this.goals = goalService.getGoals();        
+        goalService.getGoals()
+                    .subscribe(
+                         goals => this.goals = goals,
+                         error =>  this.errorMessage = <any>error
+                    );
     }
     
     goalTapped(event, goal){

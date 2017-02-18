@@ -11,15 +11,19 @@ import { ActionService } from '../../services/action.service';
     providers: [ActionService]
 })
 export class ActionListPage {
-    actions;
+    actions: Action[];
+    errorMessage: string;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, public actionService: ActionService) {
-        this.actions = actionService.getActions();
+        actionService.getActions()
+                    .subscribe(
+                         actions => this.actions = actions,
+                         error =>  this.errorMessage = <any>error
+                    );
         
     }
     
     actionTapped(event, action){
-        console.log(action);
         this.navCtrl.push(ActionPage, {"action": action});
     }
 }

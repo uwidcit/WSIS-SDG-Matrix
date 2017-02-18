@@ -7,14 +7,14 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-img src="{{ action.iconUrl }}" width="150" height="150"></ion-img>
-    <h1>{{ action.name }}</h1>
+    <ion-img src="{{ action?.iconUrl}}" width="150" height="150"></ion-img>
+    <h1>{{ action?.name }}</h1>
     <p>
-        {{ action.desc }}
+        {{ action?.desc }}
     </p>
     <h3>Related SDGs</h3>
     <ion-list>
-      <ion-item *ngFor="let goal of action.goals" (click)="goalTapped($event, goal)">
+      <ion-item *ngFor="let goal of action?.goals" (click)="goalTapped($event, goal)">
         <ion-thumbnail item-left>
             <img src="{{ goal.iconUrl }}"/>
         </ion-thumbnail>
