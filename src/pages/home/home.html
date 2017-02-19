@@ -1,16 +1,19 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar color="primary">
+        <ion-title>
+            WSIS SDG
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only color="royal" (click)="showRadio()">
+                <ion-icon name="globe"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-    <button (click)="showSDGs($event)">SDGs</button>
-    <button (click)="showActions($event)">Actions</button>
+    <img src="/assets/images/wsis_sdg_logo.png" width="40%" style="margin-left: auto; margin-right:auto;"/>
+    <br/>
+    <button (click)="showSDGs($event)" ion-button>SDGs</button>
+    <button (click)="showActions($event)" ion-button>Actions</button>
 </ion-content>

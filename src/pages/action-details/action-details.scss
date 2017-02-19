@@ -1,3 +1,19 @@
 page-action {
-
+    h1 {
+        background: color($colors, primary, base);
+        color: white;
+        padding: 8px;
+        margin-top: 0px;
+        box-shadow: 4px 4px 0px color($colors, priDark, base);
+    }
+    
+    h2 {
+        background: color($colors, secondary, base);
+        color: white;
+        padding: 8px;
+        margin-top: 0px;
+        margin-left: 16px;
+        margin-right: 16px;
+        box-shadow: 4px 4px 0px color($colors, secDark, base);
+    }
 }

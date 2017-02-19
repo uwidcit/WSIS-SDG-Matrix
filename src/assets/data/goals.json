@@ -1,0 +1,155 @@
+[   
+    {
+        "id": 0,
+        "name": "No Poverty",
+        "photoUrl": "./assets/images/goal-banner1.jpg",
+        "desc": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p><b>Sub heading</b><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>",
+        "iconUrl": "./assets/images/goal1.png",
+        "actions": [
+            {
+                "id": 0,
+                "name": "hello",
+                "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/2-min.png"
+            },
+            {
+                "id": 1,
+                "name": "another",
+                "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Zero Hunger",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "./assets/images/goal-banner2.jpg",
+        "iconUrl": "./assets/images/goal2.png",
+        "actions": [
+            {
+                "id": 1,
+                "name": "another",
+                "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Good Health And Well-Being",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "http://aiesec.org/wp-content/uploads/2017/01/sb-game-hacker.jpg",
+        "iconUrl": "./assets/images/goal3.png",
+        "actions": []
+    },
+        {
+        "id": 3,
+        "name": "Quality Education",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "./assets/images/goal-banner4.jpg",
+        "iconUrl": "./assets/images/goal4.png",
+        "actions": []
+    },
+        {
+        "id": 4,
+        "name": "Gender Equality",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "./assets/images/goal-banner5.jpg",
+        "iconUrl": "./assets/images/goal5.png",
+        "actions": []
+    },
+        {
+        "id": 5,
+        "name": "Clean Water and Sanitation",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "./assets/images/goal-banner6.jpg",
+        "iconUrl": "./assets/images/goal6.png",
+        "actions": []
+    },
+        {
+        "id": 6,
+        "name": "Affordable and Clean Energy",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "./assets/images/goal-banner7.jpg",
+        "iconUrl": "./assets/images/goal7.png",
+        "actions": []
+    },
+    {
+        "id": 7,
+        "name": "Decent Work and Economic Growth",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "./assets/images/goal-banner8.jpg",
+        "iconUrl": "./assets/images/goal8.png",
+        "actions": []
+    },
+    {
+        "id": 8,
+        "name": "Industry, Innovation and Infrastructure",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl":"./assets/images/goal-banner9.jpg",
+        "iconUrl": "./assets/images/goal9.png",
+        "actions": []
+    },
+    {
+        "id": 9,
+        "name": "Reduced Inequalities",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "http://aiesec.org/wp-content/uploads/2017/01/sb-game-hacker.jpg",
+        "iconUrl": "./assets/images/goal10.png",
+        "actions": []
+    },
+    {
+        "id": 10,
+        "name": "Sustainable Cities and Communities",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "http://aiesec.org/wp-content/uploads/2017/01/sb-game-hacker.jpg",
+        "iconUrl": "./assets/images/goal11.png",
+        "actions": []
+    },
+    {
+        "id": 11,
+        "name": "Responsible Consumption and Production",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "http://aiesec.org/wp-content/uploads/2017/01/sb-game-hacker.jpg",
+        "iconUrl": "./assets/images/goal12.png",
+        "actions": []
+    },
+    {
+        "id": 12,
+        "name": "Climate Action",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "http://aiesec.org/wp-content/uploads/2017/01/sb-game-hacker.jpg",
+        "iconUrl": "./assets/images/goal13.png",
+        "actions": []
+    },
+    {
+        "id": 13,
+        "name": "Life Below Water",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "http://aiesec.org/wp-content/uploads/2017/01/sb-game-hacker.jpg",
+        "iconUrl": "./assets/images/goal14.png",
+        "actions": []
+    },
+    {
+        "id": 14,
+        "name": "Life on Land",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "http://aiesec.org/wp-content/uploads/2017/01/sb-game-hacker.jpg",
+        "iconUrl": "./assets/images/goal15.png",
+        "actions": []
+    },
+    {
+        "id": 15,
+        "name": "Peace, Justice and Strong Institutions",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "http://aiesec.org/wp-content/uploads/2017/01/sb-game-hacker.jpg",
+        "iconUrl": "./assets/images/goal16.png",
+        "actions": []
+    },
+    {
+        "id": 16,
+        "name": "Partnerships For The Goals",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+        "photoUrl": "http://aiesec.org/wp-content/uploads/2017/01/sb-game-hacker.jpg",
+        "iconUrl": "./assets/images/goal17.png",
+        "actions": []
+    }
+]

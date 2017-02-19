@@ -15,7 +15,7 @@ export class GoalService {
     }
 
     getGoals(): Observable<SDG[]>  {
-        return this.http.request('/assets/data/goals.json')
+        return this.http.request('./assets/data/goals.json')
                     .map(res => res.json())
                     .catch(this.handleError);
     }

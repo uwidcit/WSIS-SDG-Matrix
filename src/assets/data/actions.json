@@ -1,0 +1,31 @@
+[
+    {
+        "id": 0,
+        "name": "C1: The role of governments and all stakeholders in the promotion of ICTs for development",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/2-min.png",
+        "rationales": [],
+        "desc": "the description is here",
+        "goals": [
+            {
+                "id": 2,
+                "name": "Better Air",
+                "photoUrl": "http://aiesec.org/wp-content/uploads/2017/01/sb-game-hacker.jpg",
+                "iconUrl": "https://www.itu.int/net4/wsis/stocktakingp/Content/inc/icons/sdgs/150/2.jpg"
+            },
+            {
+                "id": 0,
+                "name": "Clean Water and Sanitation",
+                "photoUrl": "http://i.huffpost.com/gen/1713200/images/o-CLEAN-WATER-facebook.jpg",
+                "iconUrl": "https://pbs.twimg.com/media/C309LZ1W8AEmuHi.jpg"
+            }
+        ]
+    }, 
+    {
+        "id": 1,
+        "name": "C3: Access to information knowledge",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": []
+    }
+]

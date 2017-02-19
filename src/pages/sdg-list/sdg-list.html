@@ -1,18 +1,17 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Sustainable Development Goals
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar color="primary">
+        <ion-title>
+            Sustainable Development Goals
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <ion-list>
-      <ion-item *ngFor="let goal of goals" (click)="goalTapped($event, goal)">
-        <ion-thumbnail item-left>
-            <img src="{{ goal.iconUrl }}"/>
-        </ion-thumbnail>
-        <h2>{{ goal.name }}</h2>
-      </ion-item>
-    </ion-list>
+    <ion-grid class="grid-full">
+        <ion-row>
+            <ion-col *ngFor="let goal of goals" width-50>
+                <img src="{{ goal.iconUrl }}" (click)="goalTapped($event, goal)"/>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

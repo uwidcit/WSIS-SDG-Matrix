@@ -1,3 +1,8 @@
 page-sdg-list {
 
+    .grid-full ion-row {
+        height: 100%;
+        padding: 0;
+        flex-wrap: wrap;
+    }
 }

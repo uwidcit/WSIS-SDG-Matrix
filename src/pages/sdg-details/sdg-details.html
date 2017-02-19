@@ -1,25 +1,27 @@
 <ion-header>
-<ion-navbar>
-    <ion-title>
-        Sustainable Development Goals
-    </ion-title>
-</ion-navbar>
+    <ion-navbar color="primary">
+        <ion-title>
+            Goal {{ goal?.id + 1 }}
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content>
-    <ion-img width="100%" height="40%" src="{{ goal?.photoUrl }}"></ion-img>
-    <div padding>
-        <h1>{{ goal?.name }}</h1>
-        <p>
-            {{ goal?. desc }}
-        </p>
-        <h3>Related Action Lines</h3>
+    <div class="container">
+        <div class="banner"  [ngStyle]="{ 'background-image': 'url(' + goal?.photoUrl + ')'}" ></div>
+        <h1 class="heading">{{ goal?.name }}</h1>
+    </div>
+    <div>
+        
+        <div [innerHTML]="goal?. desc" padding></div>
+        
+        <h2>Related Action Lines</h2>
         <ion-list>
           <ion-item *ngFor="let action of goal?.actions" (click)="actionTapped($event, action)">
             <ion-thumbnail item-left>
                 <img src="{{ action.iconUrl }}"/>
             </ion-thumbnail>
-            <h2>{{ action.name }}</h2>
+            <b>{{ action.name }}</b>
           </ion-item>
         </ion-list>
     </div>

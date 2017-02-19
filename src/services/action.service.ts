@@ -14,7 +14,7 @@ export class ActionService {
     }
 
     getActions(): Observable<Action[]>  {
-        return this.http.request('/assets/data/actions.json')
+        return this.http.request('./assets/data/actions.json')
                     .map(res => res.json())
                     .catch(this.handleError);
     }
