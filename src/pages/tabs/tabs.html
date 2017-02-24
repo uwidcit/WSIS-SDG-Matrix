@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>
+            UN SDG
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only color="royal" (click)="showMenu()">
+                <ion-icon name="globe"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-tabs>
+    <ion-tab tabIcon="home" [root]="tab1" tabTitle="Home"></ion-tab>
+    <ion-tab tabIcon="checkmark-circle" [root]="tab2" tabTitle="SDGs"></ion-tab>
+    <ion-tab tabIcon="star" [root]="tab3" tabTitle="Action Lines"></ion-tab>
+    <ion-tab tabIcon="git-network" [root]="tab4" tabTitle="Matrix"></ion-tab>
+</ion-tabs>

@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>
+            UN SDG
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only color="royal" (click)="showMenu()">
+                <ion-icon name="globe"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <p class="info">
+        <ion-icon name="information-circle"></ion-icon> 
+        Tap on an item below to see related items
+    </p>
+    <h2>Sustainable Development Goals</h2>
+    <ion-grid class="grid-full" width-50>
+        <ion-row>
+            <ion-col *ngFor="let goal of goals" [ngClass]="{'grayed': goal.hidden, 'hidden': goal.hidden && GOAL_SHOWED }" width-20>
+                <img src="./assets/images/goal{{ goal.id + 1}}.png" (click)="goalTapped($event, goal)"/>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <h2>Action Lines</h2>
+    <ion-grid class="grid-full" width-50>
+        <ion-row>
+            <ion-col *ngFor="let action of actions" [ngClass]="{'grayed': action.hidden, 'hidden': action.hidden && ACTION_SHOWED }" width-20>
+                <img src="{{ action.iconUrl }}" (click)="actionTapped($event, action)"/>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

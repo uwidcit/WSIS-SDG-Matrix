@@ -5,24 +5,137 @@
         "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/2-min.png",
         "rationales": [],
         "desc": "the description is here",
-        "goals": [
-            {
-                "id": 2,
-                "name": "Better Air",
-                "photoUrl": "http://aiesec.org/wp-content/uploads/2017/01/sb-game-hacker.jpg",
-                "iconUrl": "https://www.itu.int/net4/wsis/stocktakingp/Content/inc/icons/sdgs/150/2.jpg"
-            },
-            {
-                "id": 0,
-                "name": "Clean Water and Sanitation",
-                "photoUrl": "http://i.huffpost.com/gen/1713200/images/o-CLEAN-WATER-facebook.jpg",
-                "iconUrl": "https://pbs.twimg.com/media/C309LZ1W8AEmuHi.jpg"
-            }
-        ]
+        "goals": [0, 2]
     }, 
     {
         "id": 1,
+        "name": "C2: Information and communication infrastructure: an essential foundation for the Information Society",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": [1, 4, 6]
+    },
+    {
+        "id": 2,
         "name": "C3: Access to information knowledge",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": [3, 5, 7, 9, 10]
+    },
+    {
+        "id": 3,
+        "name": "C4: Capacity building",
+        "iconUrl": "./assets/images/action4.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": [0, 1, 2]
+    },
+    {
+        "id": 4,
+        "name": "C5: Building confidence and security in the use of ICTs",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": [2, 3, 5]
+    },
+    {
+        "id": 5,
+        "name": "C6: Enabling environment",
+        "iconUrl": "./assets/images/action6.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": [7, 8, 10, 14]
+    },
+    {
+        "id": 6,
+        "name": "C7 ICT Applications I, e-government",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": [5, 6, 8, 15, 16]
+    },
+    {
+        "id": 7,
+        "name": "C7 ICT Applications: II. e-business",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": [0, 1, 2, 4, 6, 7, 9]
+    },
+    {
+        "id": 8,
+        "name": "C7 ICT Applications: III. e-learning",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": [5, 9, 10]
+    },
+    {
+        "id": 9,
+        "name": "C7 ICT Applications: IV. e-health",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": []
+    },
+    {
+        "id": 10,
+        "name": "C7 ICT Applications: V. e-employment",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": []
+    },
+    {
+        "id": 11,
+        "name": "C7 ICT Applications: VI. e-environment",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": []
+    },
+    {
+        "id": 12,
+        "name": "C7 ICT Applications: VII. e-agriculture",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": []
+    },
+    {
+        "id": 13,
+        "name": "C7 ICT Applications: VIII. e-science",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": []
+    },
+    {
+        "id": 14,
+        "name": "C8: Cultural diversity and identity, linguistic diversity and local content",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": []
+    },
+    {
+        "id": 15,
+        "name": "C9: Media",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": []
+    },{
+        "id": 16,
+        "name": "C10: Ethical dimensions of theInformation Society",
+        "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
+        "rationales": [],
+        "desc": "the service worked",
+        "goals": []
+    },{
+        "id": 17,
+        "name": "C11: International and regional cooperation",
         "iconUrl": "https://www.itu.int/net4/wsis/prizes/2017/Content/images/processIcons/wsisalnt/400/c7/e-agr-min.png",
         "rationales": [],
         "desc": "the service worked",

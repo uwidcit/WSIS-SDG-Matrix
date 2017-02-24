@@ -15,22 +15,18 @@ export class SDGPage {
     
     goal: SDG;
     errorMessage;
+    color: string;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, public goalService: GoalService) {
-        var goal = navParams.get("goal");
-        console.log("Got goal id = " + goal.id);
+        var goalId = navParams.get("goal");
+        console.log(goalId);
 
-        if(typeof goal.actions === "undefined"){
-            console.log("Fetching goal from service");
-            goalService.getGoals()
-                        .subscribe(
-                             goals => this.goal = goals[goal.id],
-                             error =>  this.errorMessage = <any>error
-                        );
-        }
-        else{
-            this.goal = goal;
-        }
+        console.log("Fetching goal from service");
+        goalService.getGoals()
+                    .subscribe(
+                         goals => this.goal = goals[goalId],
+                         error =>  this.errorMessage = <any>error
+                    );
     }
     
     actionTapped(event, action){

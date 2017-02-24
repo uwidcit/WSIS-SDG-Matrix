@@ -7,12 +7,12 @@
 </ion-header>
 
 <ion-content>
-    <ion-list>
-      <ion-item *ngFor="let action of actions" (click)="actionTapped($event, action)">
-        <ion-thumbnail item-left width-40>
-            <img src="{{ action.iconUrl }}"/>
-        </ion-thumbnail>
-        <h3 width-60>{{ action.name }}</h3>
-      </ion-item>
-    </ion-list>
+
+    <ion-grid class="grid-full" padding>
+        <ion-row>
+            <ion-col *ngFor="let action of actions" width-33>
+                <img src="./assets/images/action4.png" (click)="actionTapped($event, action)"/><!-- src="{{ action.id }}"/>-->
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

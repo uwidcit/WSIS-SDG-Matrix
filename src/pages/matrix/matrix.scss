@@ -1,0 +1,27 @@
+page-matrix {
+
+    .grayed {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: 0.1;
+        display: block;
+    }
+    
+    .hidden {
+    }
+    
+    .info {
+        margin-left: 16px;
+        margin-right: 16px;
+        font-size: 0.9em;
+        background: #eee;
+        border-radius: 3px;
+        border: 1px solid #AAA;
+        padding: 4px;
+    }
+    
+    h2 {
+        padding-left: 16px;
+        font-size: 1.2em;
+    }
+}

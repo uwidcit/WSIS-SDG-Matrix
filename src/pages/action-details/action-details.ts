@@ -17,20 +17,13 @@ export class ActionPage {
     errorMessage;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, public actionService: ActionService) {
-        var action = navParams.get("action");
-        console.log("got action " + action.id);
+        var actionId = navParams.get("action");
         
-        if(typeof action.goals === "undefined"){
-            console.log("Fetching action from service");
-            actionService.getActions()
-                        .subscribe(
-                             actions => this.action = actions[action.id],
-                             error =>  this.errorMessage = <any>error
-                        );
-        }
-        else {
-            this.action = action;
-        }
+        actionService.getActions()
+                    .subscribe(
+                         actions => this.action = actions[actionId],
+                         error =>  this.errorMessage = <any>error
+                    );
     
     }
     

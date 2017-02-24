@@ -7,6 +7,7 @@ export class SDG {
     actions: Action[];
     photoUrl: string;
     iconUrl: string;
+    color: string;
     
     constructor(id: number, name: string, photoUrl: string, iconUrl: string) { 
         this.id = id;

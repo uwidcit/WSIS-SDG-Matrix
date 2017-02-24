@@ -11,7 +11,7 @@
     <ion-grid>
         <ion-row>
             <ion-col width-20>
-                <img src="{{ action?.iconUrl}}" />
+                <img src="./assets/images/action4.png"/><!--{{ action?.id}}" />-->
             </ion-col>
             <ion-col width-80>
                 <h1>{{ action?.name }}</h1>
@@ -22,12 +22,11 @@
     <div [innerHTML]="action?. desc" padding></div>
     
     <h2>Related SDGs</h2>
-    <ion-list>
-      <ion-item *ngFor="let goal of action?.goals" (click)="goalTapped($event, goal)">
-        <ion-thumbnail item-left>
-            <img src="{{ goal.iconUrl }}"/>
-        </ion-thumbnail>
-        {{ goal.name }}
-      </ion-item>
-    </ion-list>
+    <ion-grid class="grid-full">
+        <ion-row>
+            <ion-col *ngFor="let goal of action?.goals" width-33>
+                <img src="./assets/images/goal{{ goal + 1}}.png" (click)="goalTapped($event, goal)"/>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

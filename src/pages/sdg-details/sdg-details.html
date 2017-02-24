@@ -16,13 +16,12 @@
         <div [innerHTML]="goal?. desc" padding></div>
         
         <h2>Related Action Lines</h2>
-        <ion-list>
-          <ion-item *ngFor="let action of goal?.actions" (click)="actionTapped($event, action)">
-            <ion-thumbnail item-left>
-                <img src="{{ action.iconUrl }}"/>
-            </ion-thumbnail>
-            <b>{{ action.name }}</b>
-          </ion-item>
-        </ion-list>
+        <ion-grid class="grid-full" padding>
+            <ion-row>
+                <ion-col *ngFor="let action of goal?.actions" width-33>
+                    <img src="./assets/images/action4.png" (click)="actionTapped($event, action)"/>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
     </div>
 </ion-content>

@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {NavController, NavParams} from 'ionic-angular';
+import {NavController, NavParams, App} from 'ionic-angular';
 
 import { SDGPage } from '../sdg-details/sdg-details';
 import { SDG } from '../sdg-details/sdg';
@@ -16,7 +16,8 @@ export class SDGListPage {
     goals: SDG[];
     errorMessage: string;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams, public goalService : GoalService) {        
+    constructor(public app: App, public navCtrl: NavController, public navParams: NavParams, 
+                 public goalService : GoalService) {        
         goalService.getGoals()
                     .subscribe(
                          goals => this.goals = goals,
@@ -25,7 +26,7 @@ export class SDGListPage {
     }
     
     goalTapped(event, goal){
-        this.navCtrl.push(SDGPage, {"goal": goal});
+        this.app.getRootNav().push(SDGPage, {"goal": goal.id});
     }
 
 }
