@@ -1,5 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { Http    } from '@angular/http';
 import { MyApp } from './app.component';
 
 import { HomePage } from '../pages/home/home';
@@ -22,7 +24,12 @@ import { MatrixPage } from '../pages/matrix/matrix';
         TabPage
     ],
     imports: [
-        IonicModule.forRoot(MyApp)
+        IonicModule.forRoot(MyApp),
+        TranslateModule.forRoot({
+          provide: TranslateLoader,
+          useFactory: (createTranslateLoader),
+          deps: [Http]
+        })
     ],
     bootstrap: [IonicApp],
     entryComponents: [
@@ -39,3 +46,7 @@ import { MatrixPage } from '../pages/matrix/matrix';
 })
 
 export class AppModule {}
+
+export function createTranslateLoader(http: Http) {
+    return new TranslateStaticLoader(http, 'assets/i18n', '.json');
+}

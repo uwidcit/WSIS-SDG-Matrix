@@ -1,0 +1,20 @@
+{
+    "APPNAME": "WSIS-SDG Matrix",
+    "SDG": "SDG",
+    "SDGs": "Sustainable Development Goal",
+    "ACTION_LINES": "Action Lines",
+    "MATRIX": "Matrix",
+    "HOME": "Home",
+    "GOAL": "Goal",
+    "ACTION_LINE": "Action Line",
+    "LANGUAGE": "Language",
+    "LANGUAGES": ["English", "Spanish", "French"],
+    "OK": "Ok",
+    "CANCEL": "Cancel",
+    "MATRIX_HELP": "Tap on an item below to see related items. Long press to see more info.",
+    "RELATED_ACTIONS": "Related Action Lines",
+    "RELATED_SDGS": "Related SDGs",
+    "INTRO": "Expetendis disputationi ut mea, eirmod expetendis te eos. Dolor decore mea at, vitae quaeque mei ei, invel debet consequat delicatissimi.",
+    "INTRO_SUBHEADING": "Lorem ipsum dolor",
+    "INTRO_MORE": "Sed cu alterum inimicus, pro iudico latine luptatum ut. Ea mel inermis invenire aliquando, in aperiam saperet invidunt per."
+}

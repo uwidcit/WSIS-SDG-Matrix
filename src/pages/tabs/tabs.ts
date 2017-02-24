@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertController } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
+import { TranslateService } from 'ng2-translate';
 
 import { HomePage } from '../home/home';
 import { SDGListPage } from '../sdg-list/sdg-list';
@@ -9,8 +9,7 @@ import { MatrixPage } from '../matrix/matrix';
 
 @Component({
     selector: 'page-tabs',
-    templateUrl: 'tabs.html',
-    providers: [Storage]
+    templateUrl: 'tabs.html'
 })
 
 export class TabPage {
@@ -20,11 +19,13 @@ export class TabPage {
     tab3: any;
     tab4: any;
 
-    constructor(public alertCtrl: AlertController, public storage: Storage) {
+    constructor(public alertCtrl: AlertController, public translate: TranslateService) {
         this.tab1 = HomePage;
-        this.tab2 = SDGListPage;
-        this.tab3 = ActionListPage;
+        this.tab2 = ActionListPage;
+        this.tab3 = SDGListPage;
         this.tab4 = MatrixPage;
+        
+        translate.setDefaultLang('en');
     }
     
     showMenu() {
@@ -49,7 +50,7 @@ export class TabPage {
         alert.addButton({
             text: 'OK',
             handler: data => {
-                this.storage.set("lang", data);
+                this.translate.use(data);
             }
         });
         alert.present();

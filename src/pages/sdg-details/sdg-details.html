@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar color="primary">
         <ion-title>
-            Goal {{ goal?.id + 1 }}
+            {{ 'GOAL' | translate }} {{ goal?.id + 1 }}
         </ion-title>
     </ion-navbar>
 </ion-header>
@@ -15,7 +15,7 @@
         
         <div [innerHTML]="goal?. desc" padding></div>
         
-        <h2>Related Action Lines</h2>
+        <h2>{{ 'RELATED_ACTIONS' | translate}}</h2>
         <ion-grid class="grid-full" padding>
             <ion-row>
                 <ion-col *ngFor="let action of goal?.actions" width-33>
