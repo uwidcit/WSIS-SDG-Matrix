@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlertController } from 'ionic-angular';
+import { NavController, AlertController, PopoverController } from 'ionic-angular';
 import { TranslateService } from 'ng2-translate';
 
 import { HomePage } from '../home/home';
@@ -19,7 +19,7 @@ export class TabPage {
     tab3: any;
     tab4: any;
 
-    constructor(public alertCtrl: AlertController, public translate: TranslateService) {
+    constructor(public alertCtrl: AlertController, public translate: TranslateService, public popoverCtrl: PopoverController) {
         this.tab1 = HomePage;
         this.tab2 = ActionListPage;
         this.tab3 = SDGListPage;
@@ -54,5 +54,26 @@ export class TabPage {
             }
         });
         alert.present();
+    }
+    
+    showOverflow() {
+        let popover = this.popoverCtrl.create(Menu);
+        popover.present();
+    }
+}
+
+@Component({
+    template: '<h3 style="padding-left: 16px; font-size: 1.1em;">Menu</h3><ion-list><span ion-item id="menu" *ngFor="let option of options" (click)="optionTapped(option)">{{ option }}</span></ion-list>'
+})
+export class Menu {
+    
+    options = ["About"];
+    
+    constructor(public navCtrl: NavController) {
+        
+    }
+    
+    optionTapped() {
+        
     }
 }

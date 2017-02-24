@@ -4,8 +4,11 @@
             {{ 'APPNAME' | translate}}
         </ion-title>
         <ion-buttons end>
-            <button ion-button icon-only color="royal" (click)="showMenu()">
+            <button ion-button icon-only (click)="showMenu()">
                 <ion-icon name="globe"></ion-icon>
+            </button>
+            <button ion-button icon-only (click)="showOverflow()">
+                 <ion-icon name="more"></ion-icon>
             </button>
         </ion-buttons>
     </ion-navbar>
