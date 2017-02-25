@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, PopoverController } from 'ionic-angular';
+import { NavController, AlertController, PopoverController, App } from 'ionic-angular';
 import { TranslateService } from 'ng2-translate';
 
 import { HomePage } from '../home/home';
 import { SDGListPage } from '../sdg-list/sdg-list';
 import { ActionListPage } from '../action-list/action-list';
 import { MatrixPage } from '../matrix/matrix';
+import { AboutPage } from '../about/about';
 
 @Component({
     selector: 'page-tabs',
@@ -69,11 +70,11 @@ export class Menu {
     
     options = ["About"];
     
-    constructor(public navCtrl: NavController) {
+    constructor(public navCtrl: NavController, public app: App) {
         
     }
     
     optionTapped() {
-        
+        this.app.getRootNav().push(AboutPage, {});
     }
 }

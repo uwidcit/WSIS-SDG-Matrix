@@ -9,7 +9,7 @@
         {{ 'MATRIX_HELP' | translate}}
     </p>
     
-    <h2>{{ 'ACTION_LINES' | translate}}</h2>
+    <h2 id="actions">{{ 'ACTION_LINES' | translate}}</h2>
     <ion-grid class="grid-full" width-50>
         <ion-row>
             <ion-col *ngFor="let action of actions" [ngClass]="{'grayed': action.hidden, 'hidden': action.hidden && ACTION_SHOWED }" width-20>
@@ -18,7 +18,7 @@
         </ion-row>
     </ion-grid>
     
-    <h2>{{ 'SDGs' | translate}}</h2>
+    <h2 id="goals">{{ 'SDGs' | translate}}</h2>
     <ion-grid class="grid-full" width-50>
         <ion-row>
             <ion-col *ngFor="let goal of goals" [ngClass]="{'grayed': goal.hidden, 'hidden': goal.hidden && GOAL_SHOWED }" width-20>

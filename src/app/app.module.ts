@@ -11,6 +11,7 @@ import { SDGListPage } from '../pages/sdg-list/sdg-list';
 import { ActionPage } from '../pages/action-details/action-details';
 import { ActionListPage } from '../pages/action-list/action-list';
 import { MatrixPage } from '../pages/matrix/matrix';
+import { AboutPage } from '../pages/about/about';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { MatrixPage } from '../pages/matrix/matrix';
         ActionListPage,
         MatrixPage,
         TabPage,
+        AboutPage,
         Menu
     ],
     imports: [
@@ -42,6 +44,7 @@ import { MatrixPage } from '../pages/matrix/matrix';
         ActionListPage,
         MatrixPage,
         TabPage,
+        AboutPage,
         Menu
     ],
     providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
