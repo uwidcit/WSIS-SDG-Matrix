@@ -27,4 +27,8 @@
         </ion-row>
     </ion-grid>
     
+    <ion-fab bottom right [hidden]="!GOAL_SHOWED && !ACTION_SHOWED">
+        <button ion-fab mini color="secondary" (click)="reset($event)"><ion-icon name="refresh"></ion-icon></button>
+    </ion-fab>
+    
 </ion-content>

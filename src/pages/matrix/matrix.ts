@@ -113,5 +113,13 @@ export class MatrixPage {
                 arr[i].hidden = state;
         }
     }
+    
+    reset(event){
+        console.log("resettings");
+        this.ACTION_SHOWED = false;
+        this.GOAL_SHOWED = false;
+        this.setAllHidden(this.goals, false);
+        this.setAllHidden(this.actions, false);
+    }
 
 }
