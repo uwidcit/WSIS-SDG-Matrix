@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 
-import { AlertController } from 'ionic-angular';
+import { AlertController, App } from 'ionic-angular';
 import { NavController } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
 
 import { Action } from '../action-details/action';
+import { ActionPage } from '../action-details/action-details';
 import { SDG } from '../sdg-details/sdg';
+import { SDGPage } from '../sdg-details/sdg-details';
 
 import { GoalService } from '../../services/goal.service';
 import { ActionService } from '../../services/action.service';
@@ -29,7 +30,7 @@ export class MatrixPage {
     errorMessage;
 
     constructor(public navCtrl: NavController, public alertCtrl: AlertController, public goalService: GoalService,
-                public actionService: ActionService, public storage: Storage) {
+                public actionService: ActionService, public app: App) {
         goalService.getGoals()
                     .subscribe(
                          goals => this.goals = goals,
@@ -44,7 +45,6 @@ export class MatrixPage {
     }
     
     goalTapped(event, goal){
-        console.log("tapped");
         this.ACTION_SHOWED = false;
         this.GOAL_SHOWED = true;
         
@@ -64,7 +64,6 @@ export class MatrixPage {
     }
     
     actionTapped(event, action){
-                console.log("tapped");
         this.ACTION_SHOWED = true;
         this.GOAL_SHOWED = false;
         
@@ -81,6 +80,16 @@ export class MatrixPage {
         this.goals = this.getElements(this.allGoals, action.goals);
         
         window.location.href = '#goals';
+    }
+    
+    actionPressed(event, action){
+        console.log("pressed");
+        this.app.getRootNav().push(ActionPage, {"action": action.id});
+    }
+    
+    goalPressed(event, goal){
+        console.log("pressed");
+        this.app.getRootNav().push(SDGPage, {"goal": goal.id});
     }
     
     getElements(arr: any[], ids: any[]){
