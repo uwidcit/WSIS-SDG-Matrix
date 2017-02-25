@@ -12,7 +12,7 @@
     <h2 id="actions">{{ 'ACTION_LINES' | translate}}</h2>
     <ion-grid class="grid-full" width-50>
         <ion-row>
-            <ion-col *ngFor="let action of actions" [ngClass]="{'grayed': action.hidden, 'hidden': action.hidden && ACTION_SHOWED }" width-20>
+            <ion-col width-25 *ngFor="let action of actions" [ngClass]="{'grayed': action.hidden, 'hidden': action.hidden && ACTION_SHOWED }">
                 <img src="{{ action.iconUrl }}" (click)="actionTapped($event, action)"/>
             </ion-col>
         </ion-row>
@@ -21,7 +21,7 @@
     <h2 id="goals">{{ 'SDGs' | translate}}</h2>
     <ion-grid class="grid-full" width-50>
         <ion-row>
-            <ion-col *ngFor="let goal of goals" [ngClass]="{'grayed': goal.hidden, 'hidden': goal.hidden && GOAL_SHOWED }" width-20>
+            <ion-col width-25 *ngFor="let goal of goals" [ngClass]="{'grayed': goal.hidden, 'hidden': goal.hidden && GOAL_SHOWED }">
                 <img src="./assets/images/goal{{ goal.id + 1}}.png" (click)="goalTapped($event, goal)"/>
             </ion-col>
         </ion-row>

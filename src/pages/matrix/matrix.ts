@@ -59,7 +59,8 @@ export class MatrixPage {
         
         this.setAllHidden(this.allActions, true);
         this.actions = this.getElements(this.allActions, goal.actions);
-        console.log(this.actions);
+        
+        window.location.href = '#actions';
     }
     
     actionTapped(event, action){
@@ -78,6 +79,8 @@ export class MatrixPage {
         
         this.setAllHidden(this.allGoals, true);
         this.goals = this.getElements(this.allGoals, action.goals);
+        
+        window.location.href = '#goals';
     }
     
     getElements(arr: any[], ids: any[]){
