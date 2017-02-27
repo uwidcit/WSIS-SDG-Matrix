@@ -13,7 +13,7 @@
     <ion-grid class="grid-full" width-50>
         <ion-row>
             <ion-col *ngFor="let action of actions" [ngClass]="{'grayed': action.hidden, 'hidden': action.hidden && ACTION_SHOWED }" width-25>
-                <img src="{{ action.iconUrl }}" (click)="actionTapped($event, action)" (press)="actionPressed($event, action)"/>
+                <img src="./assets/images/action{{ action.id + 1 }}.png" (click)="actionTapped($event, action)" (press)="actionPressed($event, action)"/>
             </ion-col>
         </ion-row>
     </ion-grid>
