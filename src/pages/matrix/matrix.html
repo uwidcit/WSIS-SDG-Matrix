@@ -10,16 +10,21 @@
     </p>
     
     <h2 id="actions">{{ 'ACTION_LINES' | translate}}</h2>
-    <ion-grid class="grid-full" width-50>
+    <ion-grid class="grid-full">
         <ion-row>
-            <ion-col *ngFor="let action of actions" [ngClass]="{'grayed': action.hidden, 'hidden': action.hidden && ACTION_SHOWED }" width-25>
-                <img src="./assets/images/action{{ action.id + 1 }}.png" (click)="actionTapped($event, action)" (press)="actionPressed($event, action)"/>
+            <ion-col *ngFor="let action of actions" [ngClass]="{'grayed': action.hidden, 'hidden': action.hidden && ACTION_SHOWED }" center width-90 >
+                <ion-card style="padding: 0px; margin:0px;" (click)="actionTapped($event, action)" (press)="actionPressed($event, action)">
+                    <ion-card-content class="action">
+                        <img class="action-thumb" src="./assets/images/action{{ action.id + 1 }}.png"/>
+                        <p class="action-name">{{ action.shortName }}</p>
+                    </ion-card-content>
+                </ion-card>
             </ion-col>
         </ion-row>
     </ion-grid>
     
     <h2 id="goals">{{ 'SDGs' | translate}}</h2>
-    <ion-grid class="grid-full" width-50>
+    <ion-grid class="grid-full">
         <ion-row>
             <ion-col width-25 *ngFor="let goal of goals" [ngClass]="{'grayed': goal.hidden, 'hidden': goal.hidden && GOAL_SHOWED }">
                 <img src="./assets/images/goal{{ goal.id + 1}}.png" (click)="goalTapped($event, goal)" (press)="goalPressed($event, goal)"/>

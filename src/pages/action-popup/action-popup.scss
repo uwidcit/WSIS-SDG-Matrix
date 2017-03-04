@@ -1,0 +1,34 @@
+popup-action {
+    
+    #popup-box {
+        background: white;
+        width: 80%;
+        margin: 10% auto;
+    }
+    
+    #popup-box h1{
+        padding-left: 16px;
+        padding-bottom: 16px;
+    }
+    
+    #popup-box .subgoals{
+        padding: 16px;
+    }
+    
+    #popup-box h2 {
+        background: color($colors, secondary, base);
+        color: white;
+        padding: 8px;
+        margin-top: 0px;
+        margin-left: 16px;
+        margin-right: 16px;
+        box-shadow: 4px 4px 0px color($colors, secDark, base);
+    }
+    
+    #close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        font-size: 25px;
+    }
+}

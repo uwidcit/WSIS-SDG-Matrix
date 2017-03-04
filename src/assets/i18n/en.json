@@ -1,5 +1,5 @@
 {
-    "APPNAME": "WSIS-SDG Matrix",
+    "APPNAME": "ICT4SDG",
     "SDG": "SDG",
     "SDGs": "Sustainable Development Goals",
     "ACTION_LINES": "Action Lines",
@@ -14,9 +14,10 @@
     "MATRIX_HELP": "Tap on an item below to see related items. Long press to see more info.",
     "RELATED_ACTIONS": "Related Action Lines",
     "RELATED_SDGS": "Related SDGs",
-    "INTRO": "Expetendis disputationi ut mea, eirmod expetendis te eos. Dolor decore mea at, vitae quaeque mei ei, invel debet consequat delicatissimi.",
-    "INTRO_SUBHEADING": "Lorem ipsum dolor",
-    "INTRO_MORE": "Sed cu alterum inimicus, pro iudico latine luptatum ut. Ea mel inermis invenire aliquando, in aperiam saperet invidunt per.",
+    "INTRO": "World Summit on the Information Society (WSIS)",
+    "INTRO_MORE": "A multi-stakeholder conference organized by the International Telecommunications Union of the United Nations.",
+    "INTRO_SUBHEADING": "WSIS-SDG Matrix",
+    "INTRO_SUBMORE": "Linking WSIS Action Lines with Sustainable Development Goals” ICTs as enablers and accelerators of SDGs.",
     "ABOUT": "About",
     "ABOUT_TEXT": "This app is a collaboration between..."
 }

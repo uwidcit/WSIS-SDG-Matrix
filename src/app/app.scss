@@ -44,3 +44,14 @@ p {
     position: relative;
     height: 40%;
 }
+
+.action-popover .popover-content{
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 8% !important;
+    left: 0% !important;
+    background: rgba(0,0,0,0.5) !important;
+}
+
+.popover { background: blue; }

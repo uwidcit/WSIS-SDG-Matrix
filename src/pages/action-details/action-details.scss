@@ -31,4 +31,9 @@ page-action {
     ol li ol {
         list-style-type: lower-roman;
     }
+    
+    ion-thumbnail img{
+        width: 120px !important;
+        height: 120px !important;
+    }
 }

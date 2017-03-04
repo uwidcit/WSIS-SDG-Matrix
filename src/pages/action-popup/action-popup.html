@@ -1,0 +1,16 @@
+<ion-content id="popup-box">
+    <ion-icon id="close" name="close"></ion-icon>
+    <h1>Related Goals</h1>
+    <div *ngFor="let goal of goals">
+        <h2>
+            Goal {{ goal.goalId + 1 }}
+        </h2>
+
+        <div class="subgoals">
+            <div *ngFor="let sub of goal.subgoals">
+                <b>{{ sub.subId }}</b>
+                <div [innerHTML]="sub.rationale"></div>
+            </div>
+        </div>
+    </div>
+</ion-content>

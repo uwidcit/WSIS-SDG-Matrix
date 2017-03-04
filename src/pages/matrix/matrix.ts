@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-import { AlertController, App } from 'ionic-angular';
+import { AlertController, App, PopoverController } from 'ionic-angular';
 import { NavController } from 'ionic-angular';
 
 import { Action } from '../action-details/action';
-import { ActionPage } from '../action-details/action-details';
+import { ActionPopup } from '../action-popup/action-popup';
 import { SDG } from '../sdg-details/sdg';
 import { SDGPage } from '../sdg-details/sdg-details';
 
@@ -30,7 +30,7 @@ export class MatrixPage {
     errorMessage;
 
     constructor(public navCtrl: NavController, public alertCtrl: AlertController, public goalService: GoalService,
-                public actionService: ActionService, public app: App) {
+                public actionService: ActionService, public app: App, public popoverCtrl: PopoverController) {
         goalService.getGoals()
                     .subscribe(
                          goals => this.goals = goals,
@@ -77,14 +77,14 @@ export class MatrixPage {
         this.setAllHiddenExcept(this.actions, true, idx);
         
         this.setAllHidden(this.allGoals, true);
-        this.goals = this.getElements(this.allGoals, action.goals);
+        this.goals = this.getGoals(this.allGoals, action.goals);
         
         window.location.href = '#goals';
     }
     
     actionPressed(event, action){
-        console.log("pressed");
-        this.app.getRootNav().push(ActionPage, {"action": action.id});
+        let popover = this.popoverCtrl.create(ActionPopup, {"goals": action.goals}, {cssClass: 'action-popover'});
+        popover.present();
     }
     
     goalPressed(event, goal){
@@ -95,6 +95,13 @@ export class MatrixPage {
     getElements(arr: any[], ids: any[]){
         for(var i = 0; i < ids.length; i++){
             arr[ids[i]].hidden = false;
+        }
+        return arr;
+    }
+    
+    getGoals(arr: any[], ids: any[]){
+        for(var i = 0; i < ids.length; i++){
+            arr[ids[i].goalId].hidden = false;
         }
         return arr;
     }
