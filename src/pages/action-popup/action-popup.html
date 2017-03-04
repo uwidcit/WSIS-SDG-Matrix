@@ -1,5 +1,5 @@
 <ion-content id="popup-box">
-    <ion-icon id="close" name="close"></ion-icon>
+    <ion-icon id="close" name="close" (click)="close()"></ion-icon>
     <h1>Related Goals</h1>
     <div *ngFor="let goal of goals">
         <h2>

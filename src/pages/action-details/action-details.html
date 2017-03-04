@@ -22,16 +22,21 @@
     <div [innerHTML]="action?. desc" padding></div>
     
     <h2>{{ 'RELATED_SDGS' | translate}}</h2>
-
+    <p class="info">
+        <ion-icon name="information-circle"></ion-icon> 
+        {{ 'GOAL_HELP' | translate}}
+    </p>
     <ion-list>
-        <ion-item *ngFor="let goal of action?.goals" >
+        <ion-item *ngFor="let goal of action?.goals; let i = index;">
             <ion-thumbnail (click)="goalTapped($event, goal.goalId)" item-left>
                 <img src="./assets/images/goal{{ goal.goalId + 1}}.png" />
             </ion-thumbnail>
-            <b *ngFor="let sub of goal.subgoals">
-                {{ sub.subId }} 
-            </b>
-            <a href="#" (click)="goalPressed($event, goal.goalId)">testing</a>
+            <p (click)="goalPressed($event, i)">
+                <b>Sub-Goals:</b>
+                <span *ngFor="let sub of goal.subgoals">
+                    {{ sub.subId }} 
+                </span>
+            </p>
         </ion-item>
     </ion-list>
 </ion-content>

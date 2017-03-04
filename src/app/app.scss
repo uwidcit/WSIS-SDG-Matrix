@@ -46,12 +46,18 @@ p {
 }
 
 .action-popover .popover-content{
-    width: 100% !important;
-    height: 100% !important;
+    width: 80% !important;
     position: absolute !important;
-    top: 8% !important;
-    left: 0% !important;
-    background: rgba(0,0,0,0.5) !important;
+    top: 10% !important;
+    left: 10% !important;
 }
 
-.popover { background: blue; }
+.info {
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 0.9em;
+    background: #eee;
+    border-radius: 3px;
+    border: 1px solid #AAA;
+    padding: 4px;
+}

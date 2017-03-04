@@ -12,12 +12,13 @@
     "OK": "Ok",
     "CANCEL": "Cancel",
     "MATRIX_HELP": "Tap on an item below to see related items. Long press to see more info.",
+    "GOAL_HELP": "Tap on sub-goals to see the rationale.",
     "RELATED_ACTIONS": "Related Action Lines",
     "RELATED_SDGS": "Related SDGs",
     "INTRO": "World Summit on the Information Society (WSIS)",
     "INTRO_MORE": "A multi-stakeholder conference organized by the International Telecommunications Union of the United Nations.",
     "INTRO_SUBHEADING": "WSIS-SDG Matrix",
-    "INTRO_SUBMORE": "Linking WSIS Action Lines with Sustainable Development Goals” ICTs as enablers and accelerators of SDGs.",
+    "INTRO_SUBMORE": "Linking WSIS Action Lines with Sustainable Development Goals.",
     "ABOUT": "About",
     "ABOUT_TEXT": "This app is a collaboration between..."
 }
