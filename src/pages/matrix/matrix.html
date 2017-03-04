@@ -6,16 +6,16 @@
 <ion-content>
     <p class="info">
         <ion-icon name="information-circle"></ion-icon> 
-        {{ 'MATRIX_HELP' | translate}}
+        {{ 'MATRIX_HELP' | translate }}
     </p>
     
-    <h2 id="actions">{{ 'ACTION_LINES' | translate}}</h2>
+    <h2 id="actions">{{ 'ACTION_LINES' | translate }}</h2>
     <ion-grid class="grid-full">
         <ion-row>
             <ion-col *ngFor="let action of actions" [ngClass]="{'grayed': action.hidden, 'hidden': action.hidden && ACTION_SHOWED }" center width-90 >
                 <ion-card style="padding: 0px; margin:0px;" (click)="actionTapped($event, action)" (press)="actionPressed($event, action)">
                     <ion-card-content class="action">
-                        <img class="action-thumb" src="./assets/images/action{{ action.id + 1 }}.png"/>
+                        <img class="icon" class="action-thumb" src="./assets/images/action{{ action.id + 1 }}.png"/>
                         <p class="action-name">{{ action.shortName }}</p>
                     </ion-card-content>
                 </ion-card>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, PopoverController, App } from 'ionic-angular';
+import { NavController, AlertController, PopoverController, ViewController, App } from 'ionic-angular';
 import { TranslateService } from 'ng2-translate';
 
 import { HomePage } from '../home/home';
@@ -66,15 +66,17 @@ export class TabPage {
 @Component({
     template: '<h3 style="padding-left: 16px; font-size: 1.1em;">Menu</h3><ion-list><span ion-item id="menu" *ngFor="let option of options" (click)="optionTapped(option)">{{ option }}</span></ion-list>'
 })
+
 export class Menu {
     
     options = ["About"];
     
-    constructor(public navCtrl: NavController, public app: App) {
+    constructor(public navCtrl: NavController, public viewCtrl: ViewController, public app: App) {
         
     }
     
     optionTapped() {
+        this.viewCtrl.dismiss();
         this.app.getRootNav().push(AboutPage, {});
     }
 }
