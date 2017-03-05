@@ -1,4 +1,5 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
+import { TranslateService } from 'ng2-translate/ng2-translate';
 import { Http, Response } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
@@ -10,11 +11,17 @@ import { Action } from '../pages/action-details/action';
 @Injectable()
 export class ActionService {
     
-    constructor(public http: Http) {
+    constructor(public http: Http, public translate: TranslateService) {
+        
     }
 
     getActions(): Observable<Action[]>  {
-        return this.http.request('./assets/data/actions.json')
+        var lang = this.translate.getDefaultLang();
+        if(typeof this.translate.currentLang != "undefined")
+            lang = this.translate.currentLang;
+        var path = './assets/data/' + lang + '/actions.json';
+        console.log(path);
+        return this.http.request(path)
                     .map(res => res.json())
                     .catch(this.handleError);
     }

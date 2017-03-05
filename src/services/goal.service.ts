@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import { TranslateService } from 'ng2-translate/ng2-translate';
 import { Http, Response } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
@@ -11,11 +12,12 @@ import { SDG } from '../pages/sdg-details/sdg';
 @Injectable()
 export class GoalService {
     
-    constructor(public http: Http) {
+    constructor(public http: Http, public translate: TranslateService) {
     }
 
     getGoals(): Observable<SDG[]>  {
-        return this.http.request('./assets/data/goals.json')
+        var path = './assets/data/' + this.translate.getDefaultLang() + '/goals.json';
+        return this.http.request(path)
                     .map(res => res.json())
                     .catch(this.handleError);
     }

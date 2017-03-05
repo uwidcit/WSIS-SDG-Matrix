@@ -30,31 +30,45 @@ export class TabPage {
     }
     
     showMenu() {
-        let alert = this.alertCtrl.create();
-        alert.setTitle('Language');
-
-        alert.addInput({
-            type: 'radio',
-            label: 'English',
-            value: 'en',
-            checked: true
-        });
         
-        alert.addInput({
-            type: 'radio',
-            label: 'Espanol',
-            value: 'es',
-            checked: false
-        });
 
-        alert.addButton('Cancel');
-        alert.addButton({
-            text: 'OK',
-            handler: data => {
-                this.translate.use(data);
+        this.translate.get('LANGUAGES').subscribe(
+            value => {
+                // value is our translated string
+                console.log(value);
+                let alert = this.alertCtrl.create();
+                alert.setTitle('Language');
+                this.addLangs(value, alert)
+                
+                alert.addButton('Cancel');
+                alert.addButton({
+                    text: 'OK',
+                    handler: data => {
+                        console.log(data);
+                        this.translate.use(data);
+                    }
+                });
+                alert.present();
             }
-        });
-        alert.present();
+        );
+
+       
+    }
+    
+    addLangs(langs :any[], alert){
+        var currLang = this.translate.getDefaultLang();
+        if(typeof this.translate.currentLang != "undefined")
+            currLang = this.translate.currentLang;
+        
+        for(let i = 0; i < langs.length; i++){
+            console.log(langs[i]);
+            alert.addInput({
+                type: 'radio',
+                label: langs[i].name,
+                value: langs[i].val,
+                checked: langs[i] == currLang
+            });
+        }
     }
     
     showOverflow() {

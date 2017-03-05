@@ -10,11 +10,11 @@
     "LANGUAGE": "Language",
     "LANGUAGES": [
         {
-            "name": "English",
+            "name": "Inglés",
             "val": "en"
         },
         {
-            "name": "Spanish", 
+            "name": "Español", 
             "val": "es"
         }
     ],
