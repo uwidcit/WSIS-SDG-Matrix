@@ -10,18 +10,15 @@
     </p>
     
     <h2 id="actions">{{ 'ACTION_LINES' | translate }}</h2>
-    <ion-grid class="grid-full">
-        <ion-row>
-            <ion-col *ngFor="let action of actions" [ngClass]="{'grayed': action.hidden, 'hidden': action.hidden && ACTION_SHOWED }" center width-90 >
-                <ion-card style="padding: 0px; margin:0px;" (click)="actionTapped($event, action)" (press)="actionPressed($event, action)">
-                    <ion-card-content class="action">
-                        <img class="icon" class="action-thumb" src="./assets/images/action{{ action.id + 1 }}.png"/>
-                        <p class="action-name">{{ action.shortName }}</p>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+
+    <ion-list>
+        <ion-item *ngFor="let action of actions" (click)="actionTapped($event, action)" (press)="actionPressed($event, action)" [ngClass]="{'grayed': action.hidden, 'hidden': action.hidden && ACTION_SHOWED }" text-wrap>
+            <ion-thumbnail item-left>
+                <img class="icon" class="action-thumb" src="./assets/images/action{{ action.id + 1 }}.png"/>
+            </ion-thumbnail>
+            <p class="action-name">{{ action.shortName }}</p>
+        </ion-item>
+    </ion-list>
     
     <h2 id="goals">{{ 'SDGs' | translate}}</h2>
     <ion-grid class="grid-full">

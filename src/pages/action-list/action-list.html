@@ -5,11 +5,12 @@
 
 <ion-content>
 
-    <ion-grid class="grid-full" padding>
-        <ion-row>
-            <ion-col *ngFor="let action of actions" width-33>
-                <img class="icon" src="./assets/images/action{{ action.id + 1 }}.png" (click)="actionTapped($event, action)"/>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+    <ion-list>
+        <ion-item *ngFor="let action of actions" (click)="actionTapped($event, action)" text-wrap>
+            <ion-thumbnail item-left>
+                <img class="icon" class="action-thumb" src="./assets/images/action{{ action.id + 1 }}.png"/>
+            </ion-thumbnail>
+            <p class="action-name">{{ action.shortName }}</p>
+        </ion-item>
+    </ion-list>
 </ion-content>
