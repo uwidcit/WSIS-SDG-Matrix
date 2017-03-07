@@ -20,10 +20,12 @@ popup-action {
     }
     
     #close {
-        position: absolute;
-        top: 16px;
-        right: 16px;
         font-size: 25px;
+        position: absolute;
+        right: 0px;
+        width: 50px;
+        padding: 16px;
+        color: black;
     }
     
 }
