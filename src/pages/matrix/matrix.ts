@@ -8,13 +8,13 @@ import { ActionPopup } from '../action-popup/action-popup';
 import { SDG } from '../sdg-details/sdg';
 import { SDGPage } from '../sdg-details/sdg-details';
 
-import { GoalService } from '../../services/goal.service';
+import { SDGService } from '../../services/sdg.service';
 import { ActionService } from '../../services/action.service';
 
 @Component({
     selector: 'page-matrix',
     templateUrl: 'matrix.html',
-    providers: [GoalService, ActionService, Storage]
+    providers: [SDGService, ActionService, Storage]
 })
 
 export class MatrixPage {
@@ -29,9 +29,9 @@ export class MatrixPage {
     allActions;
     errorMessage;
 
-    constructor(public navCtrl: NavController, public alertCtrl: AlertController, public goalService: GoalService,
+    constructor(public navCtrl: NavController, public alertCtrl: AlertController, public sdgService: SDGService,
                 public actionService: ActionService, public app: App, public popoverCtrl: PopoverController) {
-        goalService.getGoals()
+        sdgService.getGoals()
                     .subscribe(
                          goals => this.goals = goals,
                          error =>  this.errorMessage = <any>error

@@ -3,13 +3,13 @@ import {NavController, NavParams, App} from 'ionic-angular';
 
 import { SDGPage } from '../sdg-details/sdg-details';
 import { SDG } from '../sdg-details/sdg';
-import { GoalService } from '../../services/goal.service';
+import { SDGService } from '../../services/sdg.service';
 
 
 @Component({
     selector: 'page-sdg-list',
     templateUrl: 'sdg-list.html',
-    providers: [GoalService]
+    providers: [SDGService]
 })
 export class SDGListPage {
     
@@ -17,8 +17,8 @@ export class SDGListPage {
     errorMessage: string;
 
     constructor(public app: App, public navCtrl: NavController, public navParams: NavParams, 
-                 public goalService : GoalService) {        
-        goalService.getGoals()
+                 public sdgService : SDGService) {        
+        sdgService.getGoals()
                     .subscribe(
                          goals => this.goals = goals,
                          error =>  this.errorMessage = <any>error

@@ -3,12 +3,12 @@ import {NavController, NavParams} from 'ionic-angular';
 
 import { SDG } from './sdg';
 import { ActionPage } from '../action-details/action-details';
-import { GoalService } from '../../services/goal.service';
+import { SDGService } from '../../services/sdg.service';
 
 @Component({
     selector: 'page-sdg',
     templateUrl: 'sdg-details.html',
-    providers: [GoalService]
+    providers: [SDGService]
 })
 
 export class SDGPage {
@@ -17,12 +17,10 @@ export class SDGPage {
     errorMessage;
     color: string;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams, public goalService: GoalService) {
+    constructor(public navCtrl: NavController, public navParams: NavParams, public sdgService: SDGService) {
         var goalId = navParams.get("goal");
-        console.log(goalId);
-
-        console.log("Fetching goal from service");
-        goalService.getGoals()
+        
+        sdgService.getGoals()
                     .subscribe(
                          goals => this.goal = goals[goalId],
                          error =>  this.errorMessage = <any>error

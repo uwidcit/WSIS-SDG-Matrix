@@ -1,9 +1,9 @@
 <ion-content id="popup-box">
     <ion-icon id="close" name="close" (click)="close()"></ion-icon>
-    <h1>Related Goals</h1>
+    <h1>{{ 'RELATED_SDGS' | translate}}</h1>
     <div *ngFor="let goal of goals">
         <h2 (click)="goalTapped($event, goal.goalId)">
-            Goal {{ goal.goalId + 1 }}
+            {{ 'SDG' | translate}} {{ goal.goalId + 1 }}
         </h2>
 
         <div class="subgoals">

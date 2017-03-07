@@ -19,11 +19,12 @@
         </ion-row>
     </ion-grid>
 
+    <h2>{{ 'TARGETS' | translate }}</h2>
     <div [innerHTML]="action?. desc" padding></div>
     
     <h2>{{ 'RELATED_SDGS' | translate}}</h2>
     <p class="info">
-        <ion-icon name="information-circle"></ion-icon> {{ 'GOAL_HELP' | translate}}
+        <ion-icon name="information-circle"></ion-icon> {{ 'TARGET_HELP' | translate}}
     </p>
     <ion-list>
         <ion-item *ngFor="let goal of action?.goals; let i = index;">
@@ -31,7 +32,7 @@
                 <img src="./assets/images/goal{{ goal.goalId + 1}}.png" />
             </ion-thumbnail>
             <p (click)="goalPressed($event, i)">
-                <b>Sub-Goals:</b>
+                <b>{{ 'TARGET' | translate }}:</b>
                 <span [hidden]="goal.subgoals.length > 0"> - </span>
                 <span *ngFor="let sub of goal.subgoals">
                     {{ sub.subId }} 

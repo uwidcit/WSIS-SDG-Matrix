@@ -10,13 +10,13 @@ import 'rxjs/add/operator/catch';
 import { SDG } from '../pages/sdg-details/sdg';
 
 @Injectable()
-export class GoalService {
+export class SDGService {
     
     constructor(public http: Http, public translate: TranslateService) {
     }
 
     getGoals(): Observable<SDG[]>  {
-        var path = './assets/data/' + this.translate.getDefaultLang() + '/goals.json';
+        var path = './assets/data/' + this.translate.getDefaultLang() + '/sdgs.json';
         return this.http.request(path)
                     .map(res => res.json())
                     .catch(this.handleError);
