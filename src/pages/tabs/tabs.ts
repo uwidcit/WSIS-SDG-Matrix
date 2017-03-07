@@ -20,7 +20,8 @@ export class TabPage {
     tab3: any;
     tab4: any;
 
-    constructor(public alertCtrl: AlertController, public translate: TranslateService, public popoverCtrl: PopoverController) {
+    constructor(public alertCtrl: AlertController, public translate: TranslateService, 
+                public popoverCtrl: PopoverController, public app: App) {
         this.tab1 = HomePage;
         this.tab2 = ActionListPage;
         this.tab3 = SDGListPage;
@@ -29,9 +30,7 @@ export class TabPage {
         translate.setDefaultLang('en');
     }
     
-    showMenu() {
-        
-
+    pickLanguage() {
         this.translate.get('LANGUAGES').subscribe(
             value => {
                 // value is our translated string
@@ -71,9 +70,12 @@ export class TabPage {
         }
     }
     
-    showOverflow() {
-        let popover = this.popoverCtrl.create(Menu);
+    showAbout() {
+        /*let popover = this.popoverCtrl.create(Menu);
         popover.present();
+        */
+        
+        this.app.getRootNav().push(AboutPage, {});
     }
 }
 

@@ -5,12 +5,16 @@
         </ion-title>
     </ion-navbar>
 </ion-header>
-<ion-content>
-    <div id="container">
-        <img src="https://www.itu.int/net4/wsis/prizes/2017/Content/images/logos/wsis_sdg_white-min.png" padding/>
-        <p padding>
-            {{ 'ABOUT_TEXT' | translate}}
-        </p>
-    </div>
-    
+<ion-content id="container">
+    <p padding>
+        {{ 'ABOUT_TEXT' | translate}}
+    </p>
+    <img src="./assets/images/ituLogo.png" class="logo" padding/>
+    <img src="./assets/images/wsis.jpg" class="logo" padding/>
+    <p padding>
+        {{ 'ABOUT_MORE' | translate}}
+    </p>
+    <img src="./assets/images/logo_lrg.png" center padding/>
+    <img src="./assets/images/agriLogo.png" center padding/>
+    <span padding center>© Agrinett Project</span>
 </ion-content>
