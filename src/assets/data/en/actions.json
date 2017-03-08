@@ -66,7 +66,7 @@
                 "goalId": 16,
                 "subgoals": [
                     {
-                        "subId" : "16.5",
+                        "subId" : "17.8",
                         "rationale": "Central to the development of reliable and open datasets should be the issues of trustworthiness and privacy. Transformation of public service to the electronic service is an important step to deliver more convenient, customer oriented and cost effective public services to the citizens in a timely manner without bureaucracy. Numerous websites where citizens can find all the procedures, information and communication from government effectively contribute to global partnership."
                     }
                 ]
@@ -538,26 +538,25 @@
                 ]
             },
             { 
-                "goalId": 15,
-                "subgoals": [
-                    {
-                        "subId" : "16.2",
-                        "rationale": "Online child sexual abuse content should be treated within the same framework."
-                    }
-                ]
-            },
-            { 
                 "goalId": 10,
                 "subgoals": [
                     {
                         "subId" : "11.3",
                         "rationale": "A wide array of ICT regulatory policies and other instruments can be put in place towards the creation of preconditions for the organizational, legal and technical, standardization and interoperability aspects of human settlement planning and management, so that public authorities can offer their services electronically and that such online services and applications be user-friendly and accessible to all. More broadly, governments and ICT regulators have a key role to play in stimulating demand for ICT services and applications, in the framework of broader strategic goals, such as connecting public institutions (especially public administrations, schools, libraries and hospitals), businesses and residential users with broadband, promoting economic development, digital inclusion, social cohesion and equality of opportunity."
+                    },
+                    {
+                        "subId" : "11.b",
+                        "rationale": ""
                     }
                 ]
             },
             { 
                 "goalId": 15,
                 "subgoals": [
+                    {
+                        "subId" : "16.2",
+                        "rationale": "Online child sexual abuse content should be treated within the same framework."
+                    },
                     {
                         "subId" : "16.3",
                         "rationale": "Enabling ICT regulatory policies ensure that market forces work without constraints and towards innovation within the prescribed national legal environment. In particular, ICT regulators ensure regulatory predictability, relevance, consistency and transparency of regulation, non-discriminatory policies and regulatory practices, equal treatment of market players, and proportionality and accountability of regulatory decisions."
@@ -795,7 +794,7 @@
                         "rationale": "Access to innovation and e-health applications is required to support health institutions, health researchers and professionals, improve local access to information and knowledge and enable the flow of information in health services and systems. ICTs provide the foundation for the delivery of tele-health, tele-medicine, electronic medical records, personal health records, and health information systems. Research and development of ICT products and services can target health sector needs and offer new opportunities for capacity building and partnerships."
                     },
                     {
-                        "subId" : "17.9",
+                        "subId" : "17.19",
                         "rationale": "International standards for the exchange of individual and public health data should be adopted by all countries, with appropriate privacy, security and confidentiality measures. Health data and information systems are needed for alerting, monitoring and controlling the spread of communicable diseases. Data on ICT uptake in the health sector provides the evidence for the uptake and trends in e-health as well as its impact on health and other related socio-economic outcomes."
                     }
                 ]
@@ -1021,6 +1020,34 @@
                         "rationale": "E-science can be considered as both an endeavor as well as an output. Science is conducted, inter alia and increasingly so, by relying on etechniques. Examples are ‘reverse’ vaccinology and synthetic biology. Data and other scientific information available to all, on an open-access basis, can assist greatly with the achievement of the post-2015 development agenda and, more specifically, with the attainment of the Sustainable Development Goals (SDGs). As science, technology and innovation (STI) cut across several of the 17 SDGs, e-science would be relevant to several of them. Moreover, e-science can also assist at a more operational level of the post-2015 agenda, namely that of the envisaged targets under specific SDGs) (as presented in the left column). E-science can therefore be seen as a means of implementation, and a means to also monitor and evaluate progress towards the achievement of the post-2015 development agenda. By promoting the application of e-science, the WSIS process would synergies with the process related to the further definition of the post-2015 development agenda, which is expected to be finalized in July 2015 and which will lead to a draft resolution for consideration by the UN General Assembly in the fall of 2015."
                     }
                 ] 
+            },
+            { 
+                "goalId": 3,
+                "subgoals": [] 
+            },
+            { 
+                "goalId": 5,
+                "subgoals": [] 
+            },
+            { 
+                "goalId": 6,
+                "subgoals": [] 
+            },
+            { 
+                "goalId": 12,
+                "subgoals": [] 
+            },
+            { 
+                "goalId": 13,
+                "subgoals": [] 
+            },
+            { 
+                "goalId": 14,
+                "subgoals": [] 
+            },
+            { 
+                "goalId": 16,
+                "subgoals": [] 
             }
         ]
     },
@@ -1223,7 +1250,7 @@
                 "goalId": 11,
                 "subgoals": [
                     {
-                        "subId" : "11.3",
+                        "subId" : "12.8",
                         "rationale": "Ensuring the balance between meeting current and future needs is central to the ethical values of sustainability, respect for nature, shared responsibility and the promotion of the common good."
                     }
                 ] 
