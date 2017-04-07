@@ -19,7 +19,7 @@ export class SDGPage {
 
     constructor(public navCtrl: NavController, public navParams: NavParams, public sdgService: SDGService) {
         var goalId = navParams.get("goal");
-        
+        console.log(goalId);
         sdgService.getGoals()
                     .subscribe(
                          goals => this.goal = goals[goalId],
