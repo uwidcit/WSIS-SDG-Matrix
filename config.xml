@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="uwi.dcit.ict4sdg" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" android-versionCode="2" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="uwi.dcit.ict4sdg" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" android-versionCode="5" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>ICT4SDG</name>
   <description>The ICT4SDG application was developed to display linkages between the World Summit on the Information Society Action Lines and the United Nation's Sustainable Development Goals.</description>
   <author email="dcit.agrinett@gmail.com" href="http://www.sta.uwi.edu/agrinett/">AgrineTT</author>
