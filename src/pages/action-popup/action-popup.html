@@ -1,5 +1,5 @@
 <ion-content id="popup-box">
-    <ion-icon id="close" name="close" (click)="close()"></ion-icon>
+    <ion-icon tappable id="close" name="close" (click)="close()"></ion-icon>
     <h1>{{ 'RELATED_SDGS' | translate}}</h1>
     <div *ngFor="let goal of goals">
         <h2 tappable (click)="goalTapped($event, goal.goalId)">
