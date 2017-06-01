@@ -13,7 +13,7 @@ page-home {
         box-shadow: 4px 4px 0px color($colors, secDark, base);
     }
     
-    #cover {
+    ion-content {
         height: 100%;
         width: 100%;
         position: fixed;
@@ -22,9 +22,6 @@ page-home {
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
-        -webkit-filter: blur(100px);
-        filter: blur(100px);
-        -webkit-filter: brightness(40%); /* Safari */
-        filter: brightness(40%);
     }
+    
 }

@@ -2,7 +2,7 @@
     <ion-icon id="close" name="close" (click)="close()"></ion-icon>
     <h1>{{ 'RELATED_SDGS' | translate}}</h1>
     <div *ngFor="let goal of goals">
-        <h2 (click)="goalTapped($event, goal.goalId)">
+        <h2 tappable (click)="goalTapped($event, goal.goalId)">
             {{ 'SDG' | translate}} {{ goal.goalId + 1 }}
         </h2>
 

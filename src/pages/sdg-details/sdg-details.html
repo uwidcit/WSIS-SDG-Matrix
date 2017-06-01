@@ -19,7 +19,7 @@
         <ion-grid class="grid-full" padding>
             <ion-row>
                 <ion-col *ngFor="let action of goal?.actions" width-33>
-                    <img src="./assets/images/action{{ action + 1 }}.png" (click)="actionTapped($event, action)"/>
+                    <img tappable src="./assets/images/action{{ action + 1 }}.png" (click)="actionTapped($event, action)"/>
                 </ion-col>
             </ion-row>
         </ion-grid>
