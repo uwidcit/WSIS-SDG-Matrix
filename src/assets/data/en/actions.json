@@ -580,7 +580,7 @@
                 ]
             },
             { 
-                "goalId": 17,
+                "goalId": 16,
                 "subgoals": [
                     {
                         "subId" : "17.6",
@@ -711,7 +711,7 @@
         "id": 8,
         "name": "C7 ICT Applications: III. e-learning",
         "shortName": "E-Learning",
-        "desc": "<ol><li></li></ol>",
+        "desc": "<p></p>",
         "goals": [
             { 
                 "goalId": 3,
@@ -1310,7 +1310,7 @@
         "desc": "<p>International cooperation among all stakeholders is vital in implementation of this plan of action and needs to be strengthened with a view to promoting universal access and bridging the digital divide, inter alia, by provision of means of implementation</p><ol><li>Governments of developing countries should raise the relative priority of ICT projects in requests for international cooperation and assistance on infrastructure development projects from developed countries and international financial organizations.</li><li>Within the context of the UN’s Global Compact and building upon the United Nations Millennium Declaration, build on and accelerate public-private partnerships, focusing on the use of ICT in development.</li><li>Invite international and regional organizations to mainstream ICTs in their work programmes and to assist all levels of developing countries, to be involved in the preparation and implementation of national action plans to support the fulfilment of the goals indicated in the declaration of principles and in this Plan of Action, taking into account the importance of regional initiatives.</li></ol>",
         "goals": [
             { 
-                "goalId": 17,
+                "goalId": 16,
                 "subgoals": [
                     {
                         "subId" : "17.9",
