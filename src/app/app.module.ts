@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Http } from '@angular/http';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { MyApp } from './app.component';
 
 import { HomePage } from '../pages/home/home';
@@ -50,7 +51,7 @@ import { AboutPage } from '../pages/about/about';
         ActionPopup,
         Menu
     ],
-    providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+    providers: [InAppBrowser,{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 
 export class AppModule {}
