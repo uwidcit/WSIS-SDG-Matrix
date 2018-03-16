@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, PopoverController, ViewController, App } from 'ionic-angular';
 import { TranslateService } from 'ng2-translate';
+import { InAppBrowser } from "@ionic-native/in-app-browser";
 
 import { HomePage } from '../home/home';
 import { SDGListPage } from '../sdg-list/sdg-list';
@@ -21,7 +22,7 @@ export class TabPage {
     tab4: any;
 
     constructor(public alertCtrl: AlertController, public translate: TranslateService, 
-                public popoverCtrl: PopoverController, public app: App) {
+                public popoverCtrl: PopoverController, public app: App, private iab: InAppBrowser) {
         this.tab1 = HomePage;
         this.tab2 = ActionListPage;
         this.tab3 = SDGListPage;
@@ -30,6 +31,12 @@ export class TabPage {
         translate.setDefaultLang('en');
     }
     
+    openWebpage() {
+    
+        // Opening a URL and returning an InAppBrowserObject
+        const browser = this.iab.create('https://www.itu.int/net4/wsis/forum/2018/Pages/Agenda#agenda', '_system');
+      }
+
     pickLanguage() {
         this.translate.get('LANGUAGES').subscribe(
             value => {
