@@ -30,7 +30,7 @@ import { AboutPage } from '../pages/about/about';
         Menu
     ],
     imports: [
-        IonicModule.forRoot(MyApp),
+        IonicModule.forRoot(MyApp,{ mode:'md'}),
         TranslateModule.forRoot({
           provide: TranslateLoader,
           useFactory: (createTranslateLoader),
