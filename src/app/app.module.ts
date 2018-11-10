@@ -1,9 +1,17 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
-import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { MyApp } from './app.component';
+
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
+
 import { Http } from '@angular/http';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-import { MyApp } from './app.component';
+
+
 
 import { HomePage } from '../pages/home/home';
 import { TabPage, Menu } from '../pages/tabs/tabs';
@@ -31,6 +39,7 @@ import { AboutPage } from '../pages/about/about';
     ],
     imports: [
         IonicModule.forRoot(MyApp),
+      BrowserModule,
         TranslateModule.forRoot({
           provide: TranslateLoader,
           useFactory: (createTranslateLoader),
@@ -51,7 +60,11 @@ import { AboutPage } from '../pages/about/about';
         ActionPopup,
         Menu
     ],
-    providers: [InAppBrowser,{provide: ErrorHandler, useClass: IonicErrorHandler}]
+    providers: [
+      StatusBar,
+      SplashScreen,
+      InAppBrowser,
+      {provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 
 export class AppModule {}
