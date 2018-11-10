@@ -6,7 +6,7 @@
 <ion-content padding>
     <ion-grid class="grid-full">
         <ion-row>
-            <ion-col *ngFor="let goal of goals" width-50>
+            <ion-col *ngFor="let goal of goals" col-6>
                 <img src="./assets/images/goal{{ goal.id + 1}}.png" (click)="goalTapped($event, goal)"/>
             </ion-col>
         </ion-row>
