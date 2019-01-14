@@ -1,9 +1,9 @@
 import {Component} from "@angular/core";
-import {NavController, NavParams, App} from 'ionic-angular';
+import {App} from 'ionic-angular';
 
 import { SDGPage } from '../sdg-details/sdg-details';
 import { SDG } from '../sdg-details/sdg';
-import { SDGService } from '../../services/sdg.service';
+import { SDGService } from '@services/sdg.service';
 
 
 @Component({
@@ -16,8 +16,7 @@ export class SDGListPage {
     goals: SDG[];
     errorMessage: string;
 
-    constructor(public app: App, public navCtrl: NavController, public navParams: NavParams, 
-                 public sdgService : SDGService) {        
+    constructor(public app: App, public sdgService : SDGService) {
         sdgService.getGoals()
                     .subscribe(
                          goals => this.goals = goals,

@@ -9,13 +9,12 @@ import { SDGPage } from '../sdg-details/sdg-details';
 })
 
 export class ActionPopup {
-    
     goals: any[];
-    errorMessage;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+    constructor(public navCtrl: NavController,
+                public navParams: NavParams,
+                public viewCtrl: ViewController) {
         this.goals = navParams.get("goals");
-        console.log(this.goals);
     }
     
     goalTapped(event, goal) {

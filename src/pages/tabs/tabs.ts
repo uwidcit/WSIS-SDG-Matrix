@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {AlertController, App, NavController, PopoverController, ViewController} from 'ionic-angular';
+import {AlertController, App, ViewController} from 'ionic-angular';
 import {TranslateService} from 'ng2-translate';
 import {InAppBrowser} from "@ionic-native/in-app-browser";
 
@@ -23,7 +23,6 @@ export class TabPage {
 
   constructor(public alertCtrl: AlertController,
               public translate: TranslateService,
-              public popoverCtrl: PopoverController,
               public app: App,
               private iab: InAppBrowser) {
 
@@ -37,7 +36,7 @@ export class TabPage {
 
   openWebpage() {
     // Opening a URL and returning an InAppBrowserObject
-    const browser = this.iab.create('https://www.itu.int/net4/wsis/forum/2018/Pages/Agenda#agenda', '_system');
+    this.iab.create('https://www.itu.int/net4/wsis/forum/2018/Pages/Agenda#agenda', '_system');
   }
 
   pickLanguage() {
@@ -93,11 +92,7 @@ export class Menu {
 
   options = ["About"];
 
-  constructor(public navCtrl: NavController,
-              public viewCtrl: ViewController,
-              public app: App) {
-
-  }
+  constructor(public viewCtrl: ViewController, public app: App) {  }
 
   optionTapped() {
     this.viewCtrl.dismiss();

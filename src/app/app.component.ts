@@ -3,13 +3,12 @@ import {Platform} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 
-import {TabPage} from '../pages/tabs/tabs';
+import {TabPage} from '@pages/tabs/tabs';
 
 
 @Component({
   templateUrl: 'app.html'
 })
-
 export class MyApp {
 
   rootPage = TabPage;
@@ -18,7 +17,7 @@ export class MyApp {
               private statusBar: StatusBar,
               private splashScreen: SplashScreen) {
 
-    platform.ready().then(() => {
+    this.platform.ready().then(() => {
       this.statusBar.backgroundColorByHexString('#4CAF50');
       this.splashScreen.hide();
     });

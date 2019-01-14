@@ -1,19 +1,18 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 
-import {AlertController, App, NavController, PopoverController} from 'ionic-angular';
-
+import {App, PopoverController} from 'ionic-angular';
 import {Action} from '../action-details/action';
 import {ActionPopup} from '../action-popup/action-popup';
 import {SDG} from '../sdg-details/sdg';
 import {SDGPage} from '../sdg-details/sdg-details';
 
-import {SDGService} from '../../services/sdg.service';
-import {ActionService} from '../../services/action.service';
+import {SDGService} from '@services/sdg.service';
+import {ActionService} from '@services/action.service';
 
 @Component({
   selector: 'page-matrix',
   templateUrl: 'matrix.html',
-  providers: [SDGService, ActionService, Storage]
+  providers: [SDGService, ActionService]
 })
 
 export class MatrixPage {
@@ -31,9 +30,7 @@ export class MatrixPage {
   allActions;
   errorMessage;
 
-  constructor(public navCtrl: NavController,
-              public alertCtrl: AlertController,
-              public sdgService: SDGService,
+  constructor(public sdgService: SDGService,
               public actionService: ActionService,
               public app: App,
               public popoverCtrl: PopoverController) {
