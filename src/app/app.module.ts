@@ -23,6 +23,7 @@ import {TabPage, Menu} from '@pages/tabs/tabs';
 // Services
 import {ActionService} from '@services/action.service'
 import {SDGService} from '@services/sdg.service';
+import { AnalyticsService } from './analytics/analytics.service';
 
 Sentry.init({dsn: 'https://4852a8e4c6004ed29198042d6473dbe3@sentry.io/1370709'});
 
@@ -81,6 +82,7 @@ export class SentryErrorHandler implements ErrorHandler {
     InAppBrowser,
     ActionService,
     SDGService,
+    AnalyticsService,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     { provide: ErrorHandler, useClass: SentryErrorHandler }
   ]
