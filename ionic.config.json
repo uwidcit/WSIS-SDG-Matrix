@@ -4,5 +4,6 @@
     "cordova": {}
   },
   "type": "ionic-angular",
-  "id": "uwi.dcit.ict4sdg"
+  "id": "uwi.dcit.ict4sdg",
+  "app_id": ""
 }
