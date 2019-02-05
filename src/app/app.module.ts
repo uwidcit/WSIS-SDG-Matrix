@@ -20,10 +20,13 @@ import {MatrixPage} from '@pages/matrix/matrix';
 import {SDGPage} from '@pages/sdg-details/sdg-details';
 import {SDGListPage} from '@pages/sdg-list/sdg-list';
 import {TabPage, Menu} from '@pages/tabs/tabs';
+import {TwitterPage} from "@pages/twitter/twitter";
+
 // Services
 import {ActionService} from '@services/action.service'
 import {SDGService} from '@services/sdg.service';
 import { AnalyticsService } from './analytics/analytics.service';
+
 
 Sentry.init({dsn: 'https://4852a8e4c6004ed29198042d6473dbe3@sentry.io/1370709'});
 
@@ -49,9 +52,11 @@ export class SentryErrorHandler implements ErrorHandler {
     ActionListPage,
     MatrixPage,
     TabPage,
+    TwitterPage,
     AboutPage,
     ActionPopup,
     Menu
+
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -64,16 +69,17 @@ export class SentryErrorHandler implements ErrorHandler {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage,
-    SDGPage,
-    SDGListPage,
-    ActionPage,
-    ActionListPage,
-    MatrixPage,
-    TabPage,
     AboutPage,
     ActionPopup,
+    ActionPage,
+    ActionListPage,
+    HomePage,
+    MyApp,
+    SDGPage,
+    SDGListPage,
+    MatrixPage,
+    TabPage,
+    TwitterPage,
     Menu
   ],
   providers: [

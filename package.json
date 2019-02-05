@@ -1,5 +1,5 @@
 {
-  "name": "ICT4SDG",
+  "name": "ict4sdg",
   "author": "AgriNeTT",
   "description": "un-sdg: An Ionic project",
   "homepage": "https://sta.uwi.edu/rdifund/projects/agrinett/",
@@ -52,7 +52,11 @@
     "cordova-plugin-splashscreen",
     "ionic-plugin-keyboard"
   ],
-  "cordovaPlatforms": [],
+  "cordovaPlatforms": [
+    "android",
+    "browser",
+    "ios"
+  ],
   "config": {
     "ionic_webpack": "./config/webpack.config.js"
   }
