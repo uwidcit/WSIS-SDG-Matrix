@@ -4,7 +4,32 @@
 </ion-header>
 <ion-content>
     <div id="cover"></div>
-    <img src="./assets/images/logo.png" padding/>
-
-    
+    <img src="./assets/images/logo_alt.png" padding />
+    <p padding>
+        {{ 'INFO' | translate}}
+    </p>
+    <h2>{{ 'WSIS_FORUM_HOME' | translate }}</h2>
+    <p padding>
+            {{ 'WSIS_FORUM_HOME_INFO' | translate}}
+    </p>
+    <p padding>
+            {{ 'WSIS_FORUM_HOME_INFO_MORE' | translate}}
+    </p>
+    <ion-grid>
+        <ion-row>
+                <ion-col col-12>
+                    <button ion-button full color="medium" (click)="openRegister()">
+                        Register for WSIS 2019
+                    </button>
+                </ion-col>
+            </ion-row>
+        <!-- <ion-row>
+            <ion-col float-right>
+                <button (click)="showFacebook()" float-right><ion-icon name="logo-facebook" ></ion-icon></button>
+                <button (click)="showTwitter()"float-right><ion-icon name="logo-twitter" ></ion-icon></button>
+                <button (click)="showAbout()" float-right><ion-icon name="logo-flickr"></ion-icon></button>  
+                <button (click)="showInstagram()" float-right><ion-icon name="logo-instagram"></ion-icon></button>
+            </ion-col>
+        </ion-row> -->
+    </ion-grid>
 </ion-content>

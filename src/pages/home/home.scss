@@ -1,6 +1,6 @@
 page-home {
     p {
-        color: white;
+        color: black;
     }
 
     h2 {
@@ -12,19 +12,28 @@ page-home {
         margin-right: 16px;
         box-shadow: 4px 4px 0px color($colors, secDark, base);
     }
-    
-    #cover {
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        z-index: -100;
-        background-image: url("../assets/images/banner.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        -webkit-filter: blur(100px);
-        filter: blur(100px);
-        -webkit-filter: brightness(40%); /* Safari */
-        filter: brightness(40%);
+
+    ion-icon {
+        font-size: 3.6rem;
     }
+
+    button{
+        margin: 0 5px 0 5px;
+        background: transparent;
+    }
+    
+    // #cover {
+    //     height: 100%;
+    //     width: 100%;
+    //     position: fixed;
+    //     z-index: -100;
+    //     background-image: url("../assets/images/banner.jpg");
+    //     background-repeat: no-repeat;
+    //     background-attachment: fixed;
+    //     background-size: cover;
+    //     -webkit-filter: blur(100px);
+    //     filter: blur(100px);
+    //     -webkit-filter: brightness(40%); /* Safari */
+    //     filter: brightness(40%);
+    // }
 }
