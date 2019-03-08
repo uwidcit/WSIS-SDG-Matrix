@@ -37,7 +37,22 @@ export class TabPage {
 
   openAgendaWebPage() {
     // Opening a URL and returning an InAppBrowserObject
-    this.iab.create('https://www.itu.int/net4/wsis/forum/2018/Pages/Agenda#agenda', '_system');
+    this.iab.create('https://www.itu.int/net4/wsis/forum/2019/Agenda', '_system');
+  }
+
+  showFacebook() {
+    // Opening a URL and returning an InAppBrowserObject
+    this.iab.create('https://www.facebook.com/WSISprocess/', '_system');
+  }
+
+  showInstagram() {
+    // Opening a URL and returning an InAppBrowserObject
+    this.iab.create('https://www.instagram.com/wsis_process/?hl=en', '_system');
+  }
+
+  showTwitter() {
+    // Opening a URL and returning an InAppBrowserObject
+    this.iab.create('https://twitter.com/WSISprocess', '_system');
   }
 
   pickLanguage() {
