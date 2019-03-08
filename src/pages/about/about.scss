@@ -1,9 +1,20 @@
 page-about {
     #container {
+        margin-top: 15px;
     }
     
     .logo {
         height: 160px;
         margin: 0 auto;
+    }
+
+    h2 {
+        background: color($colors, secondary, base);
+        color: white;
+        padding: 8px;
+        margin-top: 0px;
+        margin-left: 16px;
+        margin-right: 16px;
+        box-shadow: 4px 4px 0px color($colors, secDark, base);
     }
 }
