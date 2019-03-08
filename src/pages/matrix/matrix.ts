@@ -1,6 +1,6 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 
-import {App, PopoverController} from 'ionic-angular';
+import {App, IonicPage, PopoverController} from 'ionic-angular';
 import {Action} from '../action-details/action';
 import {ActionPopup} from '../action-popup/action-popup';
 import {SDG} from '../sdg-details/sdg';
@@ -9,6 +9,7 @@ import {SDGPage} from '../sdg-details/sdg-details';
 import {SDGService} from '@services/sdg.service';
 import {ActionService} from '@services/action.service';
 
+@IonicPage()
 @Component({
   selector: 'page-matrix',
   templateUrl: 'matrix.html',
@@ -126,8 +127,8 @@ export class MatrixPage {
     }
   }
 
-  reset(event) {
-    console.log("resettings");
+  reset() {
+    console.log("reset things");
     this.ACTION_SHOWED = false;
     this.GOAL_SHOWED = false;
     this.setAllHidden(this.goals, false);

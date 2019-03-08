@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {AlertController, App, ViewController} from 'ionic-angular';
+import {AlertController, App, IonicPage} from 'ionic-angular';
 import {TranslateService} from 'ng2-translate';
 import {InAppBrowser} from "@ionic-native/in-app-browser";
 
@@ -10,6 +10,7 @@ import {MatrixPage} from '../matrix/matrix';
 import {AboutPage} from '../about/about';
 import {TwitterPage} from '@pages/twitter/twitter';
 
+@IonicPage()
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html'
@@ -98,23 +99,31 @@ export class TabPage {
   showAbout() {
     this.app.getRootNav().push(AboutPage, {});
   }
+
   showTwitterPage(){
     this.app.getRootNav().push(TwitterPage, {});
   }
 }
 
-@Component({
-  template: '<h3 style="padding-left: 16px; font-size: 1.1em;">Menu</h3><ion-list><span ion-item id="menu" *ngFor="let option of options" (click)="optionTapped(option)">{{ option }}</span></ion-list>'
-})
-
-export class Menu {
-
-  options = ["About"];
-
-  constructor(public viewCtrl: ViewController, public app: App) {  }
-
-  optionTapped() {
-    this.viewCtrl.dismiss();
-    this.app.getRootNav().push(AboutPage, {});
-  }
-}
+// @Component({
+//   template: `
+//     <h3 style="padding-left: 16px; font-size: 1.1em;">
+//       Menu
+//     </h3>
+//     <ion-list>
+//       <span ion-item id="menu" *ngFor="let option of options" (click)="optionTapped(option)">
+//         {{ option }}
+//       </span>
+//     </ion-list>`
+// })
+// export class Menu {
+//
+//   options = ["About"];
+//
+//   constructor(public viewCtrl: ViewController, public app: App) {  }
+//
+//   optionTapped() {
+//     this.viewCtrl.dismiss();
+//     this.app.getRootNav().push(AboutPage, {});
+//   }
+// }

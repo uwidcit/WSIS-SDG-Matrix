@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
-import { Firebase } from '@ionic-native/firebase';
-import { Platform } from 'ionic-angular';
-import { AngularFirestore } from '@angular/fire/firestore';
+import {Injectable} from '@angular/core';
+import {Firebase} from '@ionic-native/firebase';
+import {Platform} from 'ionic-angular';
+import {AngularFirestore} from '@angular/fire/firestore';
+
 @Injectable()
 export class FcmProvider {
 
@@ -54,7 +55,6 @@ export class FcmProvider {
 
   // Listen to incoming FCM messages
   listenToNotifications() {
-
     return this.firebaseNative.onNotificationOpen();
   }
 

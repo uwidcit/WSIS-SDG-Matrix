@@ -1,39 +1,37 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule, ErrorHandler, Injectable} from '@angular/core';
-import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
+import {ErrorHandler, Injectable, NgModule} from '@angular/core';
+import {IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {InAppBrowser} from '@ionic-native/in-app-browser';
-import {TranslateModule, TranslateLoader, TranslateStaticLoader} from 'ng2-translate/ng2-translate';
+import {TranslateLoader, TranslateModule, TranslateStaticLoader} from 'ng2-translate/ng2-translate';
 import {Http} from '@angular/http';
 import * as Sentry from '@sentry/browser';
 import {environment} from '@env';
 
 import {MyApp} from './app.component';
 // Pages
-import {AboutPage} from '@pages/about/about';
-import {ActionPage} from '@pages/action-details/action-details';
-import {ActionListPage} from '@pages/action-list/action-list';
-import {ActionPopup} from '@pages/action-popup/action-popup';
-import {HomePage} from '@pages/home/home';
-import {MatrixPage} from '@pages/matrix/matrix';
-import {SDGPage} from '@pages/sdg-details/sdg-details';
-import {SDGListPage} from '@pages/sdg-list/sdg-list';
-import {TabPage, Menu} from '@pages/tabs/tabs';
-import {TwitterPage} from "@pages/twitter/twitter";
-
+// import {Menu, TabPage} from '@pages/tabs/tabs';
 // Firebase Related Imports
-import { Firebase } from '@ionic-native/firebase';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import {Firebase} from '@ionic-native/firebase';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 // noinspection TypeScriptPreferShortImport
 import {firebase} from "../environments/environment";
-
 // Services
 import {ActionService} from '@services/action.service'
 import {SDGService} from '@services/sdg.service';
-import { AnalyticsService } from './analytics/analytics.service';
-import { FcmProvider } from '../providers/fcm/fcm';
+import {AnalyticsService} from './analytics/analytics.service';
+import {FcmProvider} from '../providers/fcm/fcm';
+import {HomeModule} from "@pages/home/home.module";
+import {AboutModule} from "@pages/about/about.module";
+import {ActionModule} from "@pages/action-details/action-details.module";
+import {ActionListModule} from "@pages/action-list/action-list.module";
+import {MatrixModule} from "@pages/matrix/matrix.module";
+import {SDGModule} from "@pages/sdg-details/sdg-details.module";
+import {SDGListModule} from "@pages/sdg-list/sdg-list.module";
+import {TabsModule} from "@pages/tabs/tabs.module";
+import {ActionPopupModule} from "@pages/action-popup/action-popup.module";
 
 
 Sentry.init({dsn: 'https://4852a8e4c6004ed29198042d6473dbe3@sentry.io/1370709'});
@@ -53,20 +51,20 @@ export class SentryErrorHandler implements ErrorHandler {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    SDGPage,
-    SDGListPage,
-    ActionPage,
-    ActionListPage,
-    MatrixPage,
-    TabPage,
-    TwitterPage,
-    AboutPage,
-    ActionPopup,
-    Menu
+    // HomePage,
+    // SDGPage,
+    // SDGListPage,
+    // ActionPage,
+    // ActionListPage,
+    // MatrixPage,
+    // TabPage,
+    // TwitterPage,
+    // AboutPage,
+    // ActionPopup,
+    // Menu
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {preloadModules: true}),
     BrowserModule,
     // Import and initialise Firebase
     AngularFireModule.initializeApp(firebase),
@@ -76,22 +74,31 @@ export class SentryErrorHandler implements ErrorHandler {
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
       deps: [Http]
-    })
+    }),
+    HomeModule,
+    AboutModule,
+    ActionModule,
+    ActionListModule,
+    ActionPopupModule,
+    MatrixModule,
+    SDGModule,
+    SDGListModule,
+    TabsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    AboutPage,
-    ActionPopup,
-    ActionPage,
-    ActionListPage,
-    HomePage,
-    MyApp,
-    SDGPage,
-    SDGListPage,
-    MatrixPage,
-    TabPage,
-    TwitterPage,
-    Menu
+    // AboutPage,
+    // ActionPopup,
+    // ActionPage,
+    // ActionListPage,
+    // HomePage,
+    // MyApp,
+    // SDGPage,
+    // SDGListPage,
+    // MatrixPage,
+    // TabPage,
+    // TwitterPage,
+    // Menu
   ],
   providers: [
     StatusBar,
@@ -100,13 +107,10 @@ export class SentryErrorHandler implements ErrorHandler {
     ActionService,
     SDGService,
     AnalyticsService,
-
     Firebase,
     FcmProvider,
-
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     { provide: ErrorHandler, useClass: SentryErrorHandler }
-
   ]
 })
 export class AppModule {

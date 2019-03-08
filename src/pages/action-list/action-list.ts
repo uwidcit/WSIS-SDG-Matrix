@@ -1,15 +1,15 @@
 import {Component} from "@angular/core";
-import {App} from 'ionic-angular';
+import {App, IonicPage} from 'ionic-angular';
 import {ActionPage} from '../action-details/action-details';
 import {Action} from '../action-details/action';
 import {ActionService} from '@services/action.service';
 
+@IonicPage()
 @Component({
   selector: 'page-action-list',
   templateUrl: 'action-list.html',
   providers: [ActionService]
 })
-
 export class ActionListPage {
   actions: Action[];
   errorMessage: string;

@@ -1,17 +1,17 @@
 import {Component} from "@angular/core";
-import {NavController, NavParams, PopoverController} from 'ionic-angular';
+import {IonicPage, NavController, NavParams, PopoverController} from 'ionic-angular';
 
 import {SDGPage} from '../sdg-details/sdg-details';
 import {Action} from './action';
 import {ActionService} from '@services/action.service';
 import {ActionPopup} from '../action-popup/action-popup';
 
+@IonicPage()
 @Component({
   selector: 'page-action',
   templateUrl: 'action-details.html',
   providers: [ActionService]
 })
-
 export class ActionPage {
 
   action: Action;

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {environment} from '@env';
-import { Platform } from 'ionic-angular';
+import {Platform} from 'ionic-angular';
 
 declare var ga: Function;
 

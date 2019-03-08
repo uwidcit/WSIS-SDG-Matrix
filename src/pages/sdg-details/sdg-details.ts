@@ -1,10 +1,11 @@
 import {Component} from "@angular/core";
-import {NavController, NavParams} from 'ionic-angular';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 
 import {SDG} from './sdg';
 import {ActionPage} from '../action-details/action-details';
 import {SDGService} from '@services/sdg.service';
 
+@IonicPage()
 @Component({
   selector: 'page-sdg',
   templateUrl: 'sdg-details.html',

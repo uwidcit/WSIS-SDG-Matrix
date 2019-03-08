@@ -4,20 +4,26 @@
             {{ 'APPNAME' | translate}}
         </ion-title>
         <ion-buttons end>
-            <button ion-button round (click)="openWebpage()" >Agenda</button>
+          <button (click)="openAgendaWebPage()" ion-button round>
+            <ion-icon name="calendar"></ion-icon>
+          </button>
             <!-- <button ion-button icon-only (click)="pickLanguage()">
                 <ion-icon name="globe"></ion-icon>
             </button> -->
-            <button (click)="showFacebook()" ion-button><ion-icon name="logo-facebook" ></ion-icon></button>
-            <button (click)="showTwitter()" ion-button><ion-icon name="logo-twitter" ></ion-icon></button>
+          <button (click)="showFacebook()" icon-only ion-button>
+            <ion-icon name="logo-facebook"></ion-icon>
+          </button>
+          <button (click)="showTwitter()" icon-only ion-button>
+            <ion-icon name="logo-twitter"></ion-icon>
+          </button>
             <!-- <button (click)="showAbout()" float-right><ion-icon name="logo-flickr"></ion-icon></button>   -->
             <button (click)="showInstagram()" ion-button><ion-icon name="logo-instagram"></ion-icon></button>
-            <button ion-button icon-only (click)="showAbout()">
-                 <ion-icon name="information-circle"></ion-icon> 
-            </button>
-            <button ion-button icon-only (click)="showTwitterPage()">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </button>
+          <button (click)="showAbout()" icon-only ion-button>
+            <ion-icon name="information-circle"></ion-icon>
+          </button>
+          <!--<button ion-button icon-only (click)="showTwitterPage()">-->
+          <!--<ion-icon name="logo-twitter"></ion-icon>-->
+          <!--</button>-->
         </ion-buttons>
     </ion-navbar>
 </ion-header>

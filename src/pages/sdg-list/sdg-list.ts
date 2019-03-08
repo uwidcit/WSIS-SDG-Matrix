@@ -1,11 +1,11 @@
 import {Component} from "@angular/core";
-import {App} from 'ionic-angular';
+import {App, IonicPage} from 'ionic-angular';
 
-import { SDGPage } from '../sdg-details/sdg-details';
-import { SDG } from '../sdg-details/sdg';
-import { SDGService } from '@services/sdg.service';
+import {SDGPage} from '../sdg-details/sdg-details';
+import {SDG} from '../sdg-details/sdg';
+import {SDGService} from '@services/sdg.service';
 
-
+@IonicPage()
 @Component({
     selector: 'page-sdg-list',
     templateUrl: 'sdg-list.html',
