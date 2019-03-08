@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {environment} from '@env';
+import { Platform } from 'ionic-angular';
 
 declare var ga: Function;
 
@@ -10,7 +11,7 @@ export class AnalyticsService {
   public readonly SYS_CAT = 'system';
   private is_debug: boolean;
 
-  constructor() {
+  constructor(private platform: Platform) {
     this.is_debug = !environment.production;
   }
 
@@ -29,7 +30,9 @@ export class AnalyticsService {
           ga('set', 'checkProtocolTask', null);​
           ga('set', 'connection', 'online');
           ga('set', 'transportUrl', 'https://www.google-analytics.com/collect');
-          ga('set', 'platform_type', 'web');
+          // Determine what platform is loaded
+          this.setPlatformType();
+          // Attempt to retrieve and set the client id
           ga((tracker) => {
             if (!localStorage.getItem('ga:clientId')) {
               localStorage.setItem('ga:clientId', tracker.get('clientId'));
@@ -101,5 +104,17 @@ export class AnalyticsService {
       }
     }
     return false;
+  }
+
+  setPlatformType() {
+    // Set the platform initially as web
+    ga('set', 'platform_type', 'web');
+    // The check what the platform is... we move from group to specific labels
+    ['cordova', 'desktop', 'mobile', 'ios', 'pwa', 'android'].forEach((el) => {
+      if (this.platform.is(el)) {
+        if (typeof ga === 'function') { ga('set', 'platform_type', el); }
+        console.log(el + ' was true');
+      }
+    });
   }
 }

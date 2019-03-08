@@ -20,10 +20,21 @@ import {MatrixPage} from '@pages/matrix/matrix';
 import {SDGPage} from '@pages/sdg-details/sdg-details';
 import {SDGListPage} from '@pages/sdg-list/sdg-list';
 import {TabPage, Menu} from '@pages/tabs/tabs';
+import {TwitterPage} from "@pages/twitter/twitter";
+
+// Firebase Related Imports
+import { Firebase } from '@ionic-native/firebase';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+// noinspection TypeScriptPreferShortImport
+import {firebase} from "../environments/environment";
+
 // Services
 import {ActionService} from '@services/action.service'
 import {SDGService} from '@services/sdg.service';
 import { AnalyticsService } from './analytics/analytics.service';
+import { FcmProvider } from '../providers/fcm/fcm';
+
 
 Sentry.init({dsn: 'https://4852a8e4c6004ed29198042d6473dbe3@sentry.io/1370709'});
 
@@ -49,6 +60,7 @@ export class SentryErrorHandler implements ErrorHandler {
     ActionListPage,
     MatrixPage,
     TabPage,
+    TwitterPage,
     AboutPage,
     ActionPopup,
     Menu
@@ -56,6 +68,10 @@ export class SentryErrorHandler implements ErrorHandler {
   imports: [
     IonicModule.forRoot(MyApp),
     BrowserModule,
+    // Import and initialise Firebase
+    AngularFireModule.initializeApp(firebase),
+    AngularFirestoreModule,
+    // Import and initialise Translation module
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
@@ -64,16 +80,17 @@ export class SentryErrorHandler implements ErrorHandler {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage,
-    SDGPage,
-    SDGListPage,
-    ActionPage,
-    ActionListPage,
-    MatrixPage,
-    TabPage,
     AboutPage,
     ActionPopup,
+    ActionPage,
+    ActionListPage,
+    HomePage,
+    MyApp,
+    SDGPage,
+    SDGListPage,
+    MatrixPage,
+    TabPage,
+    TwitterPage,
     Menu
   ],
   providers: [
@@ -83,8 +100,13 @@ export class SentryErrorHandler implements ErrorHandler {
     ActionService,
     SDGService,
     AnalyticsService,
+
+    Firebase,
+    FcmProvider,
+
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     { provide: ErrorHandler, useClass: SentryErrorHandler }
+
   ]
 })
 export class AppModule {

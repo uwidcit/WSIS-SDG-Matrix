@@ -8,6 +8,7 @@ import {SDGListPage} from '../sdg-list/sdg-list';
 import {ActionListPage} from '../action-list/action-list';
 import {MatrixPage} from '../matrix/matrix';
 import {AboutPage} from '../about/about';
+import {TwitterPage} from '@pages/twitter/twitter';
 
 @Component({
   selector: 'page-tabs',
@@ -34,7 +35,7 @@ export class TabPage {
     translate.setDefaultLang('en');
   }
 
-  openWebpage() {
+  openAgendaWebPage() {
     // Opening a URL and returning an InAppBrowserObject
     this.iab.create('https://www.itu.int/net4/wsis/forum/2019/Agenda', '_system');
   }
@@ -96,6 +97,9 @@ export class TabPage {
 
   showAbout() {
     this.app.getRootNav().push(AboutPage, {});
+  }
+  showTwitterPage(){
+    this.app.getRootNav().push(TwitterPage, {});
   }
 }
 

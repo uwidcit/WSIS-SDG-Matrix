@@ -6,7 +6,17 @@ export const environment = {
   production: false,
   use_service_worker: false,
   google_analytics_id: '',
-  use_tracking: false
+  use_tracking: false,
+  is_debug: true
+};
+
+export const firebase = {
+  apiKey: "AIzaSyB42T8YHEhg-A8mnLx2-05wP7i4Y25ZgTI",
+  authDomain: "wsis-sdg.firebaseapp.com",
+  databaseURL: "https://wsis-sdg.firebaseio.com",
+  projectId: "wsis-sdg",
+  storageBucket: "wsis-sdg.appspot.com",
+  messagingSenderId: "3309621460"
 };
 
 /*

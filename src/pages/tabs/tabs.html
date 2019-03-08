@@ -15,13 +15,16 @@
             <button ion-button icon-only (click)="showAbout()">
                  <ion-icon name="information-circle"></ion-icon> 
             </button>
+            <button ion-button icon-only (click)="showTwitterPage()">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </button>
         </ion-buttons>
     </ion-navbar>
 </ion-header>
 
 <ion-tabs>
-    <ion-tab tabIcon="home" [root]="tab1" tabTitle=" {{ 'HOME' | translate }}"></ion-tab>
-    <ion-tab tabIcon="checkmark-circle" [root]="tab2" tabTitle=" {{ 'ACTION_LINES' | translate}}"></ion-tab>
-    <ion-tab tabIcon="star" [root]="tab3" tabTitle=" {{ 'SDG' | translate}}"></ion-tab>
-    <ion-tab tabIcon="git-network" [root]="tab4" tabTitle=" {{ 'MATRIX' | translate}}"></ion-tab>
+  <ion-tab tabIcon="home" [root]="tab1" tabTitle=" {{ 'HOME' | translate }}"></ion-tab>
+  <ion-tab tabIcon="checkmark-circle" [root]="tab2" tabTitle=" {{ 'ACTION_LINES' | translate}}"></ion-tab>
+  <ion-tab tabIcon="star" [root]="tab3" tabTitle=" {{ 'SDG' | translate}}"></ion-tab>
+  <ion-tab tabIcon="git-network" [root]="tab4" tabTitle=" {{ 'MATRIX' | translate}}"></ion-tab>
 </ion-tabs>
