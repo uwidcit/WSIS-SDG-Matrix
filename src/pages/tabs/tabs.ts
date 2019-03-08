@@ -36,7 +36,7 @@ export class TabPage {
 
   openWebpage() {
     // Opening a URL and returning an InAppBrowserObject
-    this.iab.create('https://www.itu.int/net4/wsis/forum/2018/Pages/Agenda#agenda', '_system');
+    this.iab.create('https://www.itu.int/net4/wsis/forum/2019/Agenda', '_system');
   }
 
   showFacebook() {
