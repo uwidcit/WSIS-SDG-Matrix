@@ -1,28 +1,102 @@
-<!--suppress ALL -->
+<!--suppress HtmlUnknownTarget, HtmlUnknownAnchorTarget -->
 <ion-header>
   <ion-navbar color="primary">
   </ion-navbar>
 </ion-header>
-<ion-content>
+
+<ion-content class="vertical-align-content">
   <div id="cover"></div>
-  <img src="./assets/images/logo_alt.png" padding/>
-  <p padding>
-    {{ 'INFO' | translate}}
-  </p>
-  <h2>{{ 'WSIS_FORUM_HOME' | translate }}</h2>
-  <p padding>
-    {{ 'WSIS_FORUM_HOME_INFO' | translate}}
-  </p>
-  <p padding>
-    {{ 'WSIS_FORUM_HOME_INFO_MORE' | translate}}
-  </p>
-  <ion-grid>
+  <div id="top_banner" style="width: 100%; text-align: center">
+    <img alt="10 year anniversary of WSIS" src="./assets/images/logo_alt_10yr.png"/>
+  </div>
+  
+  
+  <ion-grid style="padding: 0 5px; margin-top: -15px; ">
     <ion-row>
-      <ion-col col-12>
-        <button ion-button full color="medium" (click)="openRegister()">
-          Register for WSIS 2019
-        </button>
+      <ion-col style="text-align: center;">
+        <p style="font-size:1em!important">{{ 'USE_APP' | translate}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        <a (click)="openSDG()" href="#/tabs/s-d-g/sdg-list">
+          <img src="./assets/images/sdg.jpg" alt="Go to Facebook. Facebook Icon displayed"/>
+        </a>
+      </ion-col>
+      <ion-col>
+        <p>{{ 'INFO' | translate}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        <a (click)="openActionLine()" href="#/tabs/action-lines/action-list">
+          <img src="./assets/images/wsis-action-line.jpg" alt="Action Lines"/>
+        </a>
+      </ion-col>
+      <ion-col>
+        <p>{{ 'INFO_V2' | translate}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h2>{{ 'WSIS_FORUM_HOME' | translate }}</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        <a href="">
+          <img alt="WSIS official logo" src="./assets/images/wsis_sdg_logo.png"/>
+        </a>
+      </ion-col>
+      <ion-col>
+        <p>{{ 'WSIS_FORUM_HOME_INFO' | translate}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        <img alt="10 year anniversary of WSIS" src="./assets/images/logo_alt_10yr_cropped.png"/>
+      </ion-col>
+      <ion-col>
+        <p>{{ 'WSIS_FORUM_HOME_INFO_MORE' | translate}}</p>
       </ion-col>
     </ion-row>
   </ion-grid>
+  
+  <div padding>
+    <button
+      ion-button full
+      color="medium"
+      (click)="openRegister()">
+      Register for WSIS 2019
+    </button>
+  </div>
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h2>Social Channels</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <a (click)="showFacebook()" href="">
+            <img src="./assets/images/wsis-fb.jpg" alt="Go to Facebook. Facebook Icon displayed"/>
+          </a>
+        </ion-col>
+        <ion-col>
+          <a (click)="showTwitter()" href="">
+            <img src="./assets/images/wsis-twitter.jpg" alt="Go to Twitter. Twitter Icon displayed"/>
+          </a>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <a (click)="showInstagram()" href="">
+            <img src="./assets/images/wsis-insta.jpg" alt="Go to Instragram. Instagram Icon displayed"/>
+          </a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
 </ion-content>

@@ -1,31 +1,22 @@
 <ion-header>
-    <ion-navbar color="primary">
-        <ion-title align-title="left">
-            {{ 'APPNAME' | translate}}
-        </ion-title>
-        <ion-buttons end>
-          <button (click)="openAgendaWebPage()" ion-button round>
-            <ion-icon name="calendar"></ion-icon>
-          </button>
-            <!-- <button ion-button icon-only (click)="pickLanguage()">
-                <ion-icon name="globe"></ion-icon>
-            </button> -->
-          <button (click)="showFacebook()" icon-only ion-button>
-            <ion-icon name="logo-facebook"></ion-icon>
-          </button>
-          <button (click)="showTwitter()" icon-only ion-button>
-            <ion-icon name="logo-twitter"></ion-icon>
-          </button>
-            <!-- <button (click)="showAbout()" float-right><ion-icon name="logo-flickr"></ion-icon></button>   -->
-            <button (click)="showInstagram()" ion-button><ion-icon name="logo-instagram"></ion-icon></button>
-          <button (click)="showAbout()" icon-only ion-button>
-            <ion-icon name="information-circle"></ion-icon>
-          </button>
-          <!--<button ion-button icon-only (click)="showTwitterPage()">-->
-          <!--<ion-icon name="logo-twitter"></ion-icon>-->
-          <!--</button>-->
-        </ion-buttons>
-    </ion-navbar>
+  <ion-navbar color="primary">
+    <ion-buttons start>
+      <button (click)="openAgendaWebPage()" icon-only ion-button>
+        <ion-icon name="calendar"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-left>
+      {{ 'APPNAME' | translate}}
+    </ion-title>
+    <ion-buttons end>
+      <button (click)="showAbout()" icon-only ion-button>
+        <ion-icon name="information-circle"></ion-icon>
+      </button>
+      <!-- <button ion-button icon-only (click)="pickLanguage()">
+					 <ion-icon name="globe"></ion-icon>
+			 </button> -->
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 
 <ion-tabs>
@@ -33,4 +24,5 @@
   <ion-tab tabIcon="checkmark-circle" [root]="tab2" tabTitle=" {{ 'ACTION_LINES' | translate}}"></ion-tab>
   <ion-tab tabIcon="star" [root]="tab3" tabTitle=" {{ 'SDG' | translate}}"></ion-tab>
   <ion-tab tabIcon="git-network" [root]="tab4" tabTitle=" {{ 'MATRIX' | translate}}"></ion-tab>
+  <ion-tab tabIcon="notifications" [root]="tab5" tabTitle=" {{ 'NOTIFY' | translate}}"></ion-tab>
 </ion-tabs>

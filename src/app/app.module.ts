@@ -10,12 +10,11 @@ import * as Sentry from '@sentry/browser';
 import {environment} from '@env';
 
 import {MyApp} from './app.component';
-// Pages
-// import {Menu, TabPage} from '@pages/tabs/tabs';
 // Firebase Related Imports
 import {Firebase} from '@ionic-native/firebase';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireAuth, AngularFireAuthModule} from "@angular/fire/auth";
 // noinspection TypeScriptPreferShortImport
 import {firebase} from "../environments/environment";
 // Services
@@ -23,16 +22,8 @@ import {ActionService} from '@services/action.service'
 import {SDGService} from '@services/sdg.service';
 import {AnalyticsService} from './analytics/analytics.service';
 import {FcmProvider} from '../providers/fcm/fcm';
-import {HomeModule} from "@pages/home/home.module";
-import {AboutModule} from "@pages/about/about.module";
-import {ActionModule} from "@pages/action-details/action-details.module";
-import {ActionListModule} from "@pages/action-list/action-list.module";
-import {MatrixModule} from "@pages/matrix/matrix.module";
-import {SDGModule} from "@pages/sdg-details/sdg-details.module";
-import {SDGListModule} from "@pages/sdg-list/sdg-list.module";
-import {TabsModule} from "@pages/tabs/tabs.module";
-import {ActionPopupModule} from "@pages/action-popup/action-popup.module";
 
+import {Device} from "@ionic-native/device";
 
 Sentry.init({dsn: 'https://4852a8e4c6004ed29198042d6473dbe3@sentry.io/1370709'});
 
@@ -42,6 +33,7 @@ export class SentryErrorHandler implements ErrorHandler {
 
   handleError(error) {
     if (environment.production) {
+      console.log("Sending information to Sentry");
       Sentry.captureException(error.originalError || error);
     }
     throw error;
@@ -51,17 +43,6 @@ export class SentryErrorHandler implements ErrorHandler {
 @NgModule({
   declarations: [
     MyApp,
-    // HomePage,
-    // SDGPage,
-    // SDGListPage,
-    // ActionPage,
-    // ActionListPage,
-    // MatrixPage,
-    // TabPage,
-    // TwitterPage,
-    // AboutPage,
-    // ActionPopup,
-    // Menu
   ],
   imports: [
     IonicModule.forRoot(MyApp, {preloadModules: true}),
@@ -69,37 +50,16 @@ export class SentryErrorHandler implements ErrorHandler {
     // Import and initialise Firebase
     AngularFireModule.initializeApp(firebase),
     AngularFirestoreModule,
+    AngularFireAuthModule,
     // Import and initialise Translation module
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
       deps: [Http]
-    }),
-    HomeModule,
-    AboutModule,
-    ActionModule,
-    ActionListModule,
-    ActionPopupModule,
-    MatrixModule,
-    SDGModule,
-    SDGListModule,
-    TabsModule
+    })
   ],
   bootstrap: [IonicApp],
-  entryComponents: [
-    // AboutPage,
-    // ActionPopup,
-    // ActionPage,
-    // ActionListPage,
-    // HomePage,
-    // MyApp,
-    // SDGPage,
-    // SDGListPage,
-    // MatrixPage,
-    // TabPage,
-    // TwitterPage,
-    // Menu
-  ],
+  entryComponents: [],
   providers: [
     StatusBar,
     SplashScreen,
@@ -109,6 +69,8 @@ export class SentryErrorHandler implements ErrorHandler {
     AnalyticsService,
     Firebase,
     FcmProvider,
+    AngularFireAuth,
+    Device,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     { provide: ErrorHandler, useClass: SentryErrorHandler }
   ]

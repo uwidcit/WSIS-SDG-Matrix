@@ -3,13 +3,6 @@ import {AlertController, App, IonicPage} from 'ionic-angular';
 import {TranslateService} from 'ng2-translate';
 import {InAppBrowser} from "@ionic-native/in-app-browser";
 
-import {HomePage} from '../home/home';
-import {SDGListPage} from '../sdg-list/sdg-list';
-import {ActionListPage} from '../action-list/action-list';
-import {MatrixPage} from '../matrix/matrix';
-import {AboutPage} from '../about/about';
-import {TwitterPage} from '@pages/twitter/twitter';
-
 @IonicPage()
 @Component({
   selector: 'page-tabs',
@@ -22,16 +15,18 @@ export class TabPage {
   tab2: any;
   tab3: any;
   tab4: any;
+  tab5: any;
 
   constructor(public alertCtrl: AlertController,
               public translate: TranslateService,
               public app: App,
               private iab: InAppBrowser) {
 
-    this.tab1 = HomePage;
-    this.tab2 = ActionListPage;
-    this.tab3 = SDGListPage;
-    this.tab4 = MatrixPage;
+    this.tab1 = "HomePage";
+    this.tab2 = "ActionListPage";
+    this.tab3 = "SDGListPage";
+    this.tab4 = "MatrixPage";
+    this.tab5 = "NotificationPage";
 
     translate.setDefaultLang('en');
   }
@@ -39,21 +34,6 @@ export class TabPage {
   openAgendaWebPage() {
     // Opening a URL and returning an InAppBrowserObject
     this.iab.create('https://www.itu.int/net4/wsis/forum/2019/Agenda', '_system');
-  }
-
-  showFacebook() {
-    // Opening a URL and returning an InAppBrowserObject
-    this.iab.create('https://www.facebook.com/WSISprocess/', '_system');
-  }
-
-  showInstagram() {
-    // Opening a URL and returning an InAppBrowserObject
-    this.iab.create('https://www.instagram.com/wsis_process/?hl=en', '_system');
-  }
-
-  showTwitter() {
-    // Opening a URL and returning an InAppBrowserObject
-    this.iab.create('https://twitter.com/WSISprocess', '_system');
   }
 
   pickLanguage() {
@@ -76,8 +56,6 @@ export class TabPage {
         alert.present();
       }
     );
-
-
   }
 
   addLangs(langs: any[], alert) {
@@ -97,33 +75,10 @@ export class TabPage {
   }
 
   showAbout() {
-    this.app.getRootNav().push(AboutPage, {});
+    this.app.getRootNav().push('AboutPage', {});
   }
 
   showTwitterPage(){
-    this.app.getRootNav().push(TwitterPage, {});
+    this.app.getRootNav().push('TwitterPage', {});
   }
 }
-
-// @Component({
-//   template: `
-//     <h3 style="padding-left: 16px; font-size: 1.1em;">
-//       Menu
-//     </h3>
-//     <ion-list>
-//       <span ion-item id="menu" *ngFor="let option of options" (click)="optionTapped(option)">
-//         {{ option }}
-//       </span>
-//     </ion-list>`
-// })
-// export class Menu {
-//
-//   options = ["About"];
-//
-//   constructor(public viewCtrl: ViewController, public app: App) {  }
-//
-//   optionTapped() {
-//     this.viewCtrl.dismiss();
-//     this.app.getRootNav().push(AboutPage, {});
-//   }
-// }

@@ -1,0 +1,25 @@
+<!--suppress HtmlUnknownTarget -->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Notification</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div style="width: 100%; text-align: center">
+    <img alt="10 year anniversary of WSIS" src="./assets/images/logo_alt_10yr.png"/>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let message of messages | async"
+              class="item item-block item-ios alert-type-{{message.category}}"
+              (click)="displayMessage(message)">
+      <h2>{{message.title}}</h2>
+      <p>
+        <em>{{message.message}}</em> <br>
+      </p>
+      <p><span style="font-size: .7em">
+        {{message.date_created.toDate() | date:'long'}}
+      </span></p>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,39 +1,35 @@
 page-home {
-    p {
-        color: black;
-    }
+  h2 {
+    background: color($colors, secondary, base);
+    color: white;
+    padding: 8px;
+    margin: 2px 8px;
+    box-shadow: 4px 4px 0 color($colors, secDark, base);
+  }
 
-    h2 {
-        background: color($colors, secondary, base);
-        color: white;
-        padding: 8px;
-        margin-top: 0px;
-        margin-left: 16px;
-        margin-right: 16px;
-        box-shadow: 4px 4px 0px color($colors, secDark, base);
-    }
+  p {
+    color: white !important;
+  }
 
-    ion-icon {
-        font-size: 3.6rem;
-    }
+  ion-icon {
+    font-size: 3.6rem;
+  }
 
-    button{
-        margin: 0 5px 0 5px;
-        background: transparent;
-    }
-    
-    // #cover {
-    //     height: 100%;
-    //     width: 100%;
-    //     position: fixed;
-    //     z-index: -100;
-    //     background-image: url("../assets/images/banner.jpg");
-    //     background-repeat: no-repeat;
-    //     background-attachment: fixed;
-    //     background-size: cover;
-    //     -webkit-filter: blur(100px);
-    //     filter: blur(100px);
-    //     -webkit-filter: brightness(40%); /* Safari */
-    //     filter: brightness(40%);
-    // }
+  button {
+    margin: 0 5px 0 5px;
+    background: transparent;
+  }
+
+  #cover {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -100;
+    background-image: url("../assets/images/banner.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    filter: brightness(40%);
+    -webkit-filter: brightness(40%); /* Safari */
+  }
 }

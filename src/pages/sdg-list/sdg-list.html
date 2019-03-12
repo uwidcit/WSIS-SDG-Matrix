@@ -1,14 +1,17 @@
+<!--suppress HtmlUnknownTarget -->
 <ion-header>
-    <ion-navbar color="primary">
-    </ion-navbar>
+  <ion-navbar color="primary">
+  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <ion-grid class="grid-full">
-        <ion-row>
-            <ion-col *ngFor="let goal of goals" col-6>
-                <img src="./assets/images/goal{{ goal.id + 1}}.png" (click)="goalTapped($event, goal)"/>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+  <ion-grid class="grid-full">
+    <ion-row>
+      <ion-col *ngFor="let goal of goals" col-6>
+        <img tappable src="./assets/images/goal{{ goal.id + 1}}.png"
+             alt="{{goal}}"
+             (click)="goalTapped($event, goal)"/>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

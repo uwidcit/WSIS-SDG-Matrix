@@ -10,6 +10,7 @@ import {environment} from '@env';
 import {FcmProvider} from "../providers/fcm/fcm";
 
 import {tap} from 'rxjs/operators';
+import {AngularFireAuth} from "@angular/fire/auth";
 
 // declare var ga: Function;
 
@@ -17,8 +18,9 @@ import {tap} from 'rxjs/operators';
   templateUrl: 'app.html'
 })
 export class MyApp {
-
   rootPage = "TabPage";
+
+  is_debug = environment.is_debug;
 
   constructor(private platform: Platform,
               private domSanitizer : DomSanitizer,
@@ -27,6 +29,7 @@ export class MyApp {
               private analytics: AnalyticsService,
               private toastCtrl: ToastController,
               public alertCtrl: AlertController,
+              public afAuth: AngularFireAuth,
               public app: App,
               private splashScreen: SplashScreen) {
 
@@ -36,27 +39,35 @@ export class MyApp {
       this.statusBar.backgroundColorByHexString('#4CAF50');
       this.splashScreen.hide();
 
-      console.log(this.platform.platforms());
-
+      if (this.is_debug) {
+        console.log(this.platform.platforms());
+      }
+      // Set up the application to handle incoming notifications
+      if (this.platform.is('cordova')) {
+        if (this.is_debug) {
+          console.log(this.platform.platforms());
+        }
+        this.setupNotificationListener();
+      } else {
+        console.log('Not a cordova supported environment');
+      }
       // Setup configuration to keep app from closing unintentionally when hardward back button is selected
       this.preventUnwantedTermination();
     });
     // Placed outside as the platform.ready method may only be executed in ionic systems
     this.analytics.startTrackerWithId(environment.google_analytics_id);
-    if (this.platform.is('cordova')) {
-      this.setupNotificationListener();
-    }
-
-    this
-      .domSanitizer
+    // Provide authentication to the user
+    this.signIn2Firebase();
+    // DOM Sanitizer to attempt to get Twitter within the app
+    this.domSanitizer
       .bypassSecurityTrustResourceUrl('https://twitter.com/');
   }
 
   // Displays notification within the application when opened
   setupNotificationListener(){
-    console.log("Attempting to configure the notification listener");
+    // if (this.is_debug) { console.log("Attempting to configure the notification listener"); }
     this.fcm.listenToNotifications().pipe(tap(msg => {
-      console.log("Notification received");
+      // if (this.is_debug) { console.log("Notification received"); }
       const toast = this.toastCtrl.create({
         message: msg.body,
         duration: 3000
@@ -65,9 +76,10 @@ export class MyApp {
     })).subscribe();
 
     this.fcm.listenToNotifications().subscribe(el => console.log(`Notification: ${el}`));
-    console.log("Successfully configured handler for notification");
+    if (this.is_debug) {
+      console.log("Successfully configured handler for notification");
+    }
   }
-
 
   // https://www.codementor.io/syseverton/ionic-3-solving-the-hardware-back-button-avoiding-to-close-the-app-k23a6wu4e
   preventUnwantedTermination() {
@@ -106,6 +118,16 @@ export class MyApp {
       }
     });
   }
+
+  signIn2Firebase(): any {
+    this.afAuth.auth.signInAnonymously().then(res => {
+      if (this.is_debug) {
+        console.log("Application was signed in successfully");
+        console.log(res);
+      }
+    }).catch(err => console.error(err));
+  }
+
 }
 
 
