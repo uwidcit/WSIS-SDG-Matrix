@@ -1,0 +1,34 @@
+page-notification {
+  // Event Message Type
+  .alert-type-1 {
+    color: #115770;
+    background-color: #d2eef7;
+    border-color: #c1e7f4;
+  }
+
+  // General Message Type
+  .alert-type-2 {
+    color: #28623c;
+    background-color: #dbf2e3;
+    border-color: #cdedd8;
+  }
+
+  // Emergency Message Type
+  .alert-type-3 {
+    color: #813838;
+    background-color: #fee2e1;
+    border-color: #fdd6d6;
+  }
+
+  h1 {
+    background: color($colors, secondary, base);
+    color: white;
+    padding: 8px;
+    margin-top: 0;
+    margin-left: 16px;
+    margin-right: 16px;
+    box-shadow: 4px 4px 0 color($colors, secDark, base);
+  }
+
+
+}

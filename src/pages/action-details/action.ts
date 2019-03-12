@@ -1,4 +1,4 @@
-import { SDG } from '../sdg-details/sdg';
+import {SDG} from '../sdg-details/sdg';
 
 export class Action {
     

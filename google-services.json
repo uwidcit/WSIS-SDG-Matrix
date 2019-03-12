@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "3309621460",
+    "firebase_url": "https://wsis-sdg.firebaseio.com",
+    "project_id": "wsis-sdg",
+    "storage_bucket": "wsis-sdg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3309621460:android:4224a1bb846c7290",
+        "android_client_info": {
+          "package_name": "uwi.dcit.ict4sdg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "3309621460-p3brqr1s1oer3a0fcbbuonaeoqhonp21.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARIKAchFpcEcfTjTPfKDvvjipekQ5sSRE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

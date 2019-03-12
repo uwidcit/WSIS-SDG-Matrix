@@ -1,5 +1,8 @@
 {
   "name": "ICT4SDG",
-  "app_id": "",
-  "type": "ionic-angular"
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "id": "uwi.dcit.ict4sdg"
 }

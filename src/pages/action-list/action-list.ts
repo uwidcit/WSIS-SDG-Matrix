@@ -1,31 +1,28 @@
 import {Component} from "@angular/core";
-import {NavController, NavParams, App} from 'ionic-angular';
+import {App, IonicPage} from 'ionic-angular';
+import {ActionPage} from '../action-details/action-details';
+import {Action} from '../action-details/action';
+import {ActionService} from '@services/action.service';
 
-import { ActionPage } from '../action-details/action-details';
-import { Action } from '../action-details/action';
-import { ActionService } from '../../services/action.service';
-
+@IonicPage()
 @Component({
-    selector: 'page-action-list',
-    templateUrl: 'action-list.html',
-    providers: [ActionService]
+  selector: 'page-action-list',
+  templateUrl: 'action-list.html',
+  providers: [ActionService]
 })
-
 export class ActionListPage {
-    actions: Action[];
-    errorMessage: string;
+  actions: Action[];
+  errorMessage: string;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams, 
-                 public actionService: ActionService, public app: App) {
-        actionService.getActions()
-                    .subscribe(
-                         actions => this.actions = actions,
-                         error =>  this.errorMessage = <any>error
-                    );
-        
-    }
-    
-    actionTapped(event, action){
-        this.app.getRootNav().push(ActionPage, {"action": action.id});
-    }
+  constructor(public actionService: ActionService, public app: App) {
+    actionService.getActions()
+      .subscribe(
+        actions => this.actions = actions,
+        error => this.errorMessage = <any>error
+      );
+  }
+
+  actionTapped(event, action) {
+    this.app.getRootNav().push(ActionPage, {"action": action.id});
+  }
 }

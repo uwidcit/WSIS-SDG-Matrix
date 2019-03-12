@@ -1,4 +1,4 @@
-import { Action } from '../action-details/action';
+import {Action} from '../action-details/action';
 
 export class SDG {
     id: number;

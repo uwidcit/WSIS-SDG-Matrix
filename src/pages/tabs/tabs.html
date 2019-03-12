@@ -1,23 +1,28 @@
 <ion-header>
-    <ion-navbar color="primary">
-        <ion-title>
-            {{ 'APPNAME' | translate}}
-        </ion-title>
-        <ion-buttons end>
-            <button ion-button round (click)="openWebpage()" >Agenda</button>
-            <button ion-button icon-only (click)="pickLanguage()">
-                <ion-icon name="globe"></ion-icon>
-            </button>
-            <button ion-button icon-only (click)="showAbout()">
-                 <ion-icon name="information-circle"></ion-icon> 
-            </button>
-        </ion-buttons>
-    </ion-navbar>
+  <ion-navbar color="primary">
+    <ion-buttons start>
+      <button (click)="openAgendaWebPage()" icon-only ion-button>
+        <ion-icon name="calendar"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-left>
+      {{ 'APPNAME' | translate}}
+    </ion-title>
+    <ion-buttons end>
+      <button (click)="showAbout()" icon-only ion-button>
+        <ion-icon name="information-circle"></ion-icon>
+      </button>
+      <!-- <button ion-button icon-only (click)="pickLanguage()">
+					 <ion-icon name="globe"></ion-icon>
+			 </button> -->
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 
 <ion-tabs>
-    <ion-tab tabIcon="home" [root]="tab1" tabTitle=" {{ 'HOME' | translate }}"></ion-tab>
-    <ion-tab tabIcon="checkmark-circle" [root]="tab2" tabTitle=" {{ 'ACTION_LINES' | translate}}"></ion-tab>
-    <ion-tab tabIcon="star" [root]="tab3" tabTitle=" {{ 'SDG' | translate}}"></ion-tab>
-    <ion-tab tabIcon="git-network" [root]="tab4" tabTitle=" {{ 'MATRIX' | translate}}"></ion-tab>
+  <ion-tab tabIcon="home" [root]="tab1" tabTitle=" {{ 'HOME' | translate }}"></ion-tab>
+  <ion-tab tabIcon="checkmark-circle" [root]="tab2" tabTitle=" {{ 'ACTION_LINES' | translate}}"></ion-tab>
+  <ion-tab tabIcon="star" [root]="tab3" tabTitle=" {{ 'SDG' | translate}}"></ion-tab>
+  <ion-tab tabIcon="git-network" [root]="tab4" tabTitle=" {{ 'MATRIX' | translate}}"></ion-tab>
+  <ion-tab tabIcon="notifications" [root]="tab5" tabTitle=" {{ 'NOTIFY' | translate}}"></ion-tab>
 </ion-tabs>

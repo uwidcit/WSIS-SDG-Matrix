@@ -9,21 +9,21 @@
         {{ 'MATRIX_HELP' | translate }}
     </p>
     
-    <h2 id="actions">{{ 'ACTION_LINES' | translate }}</h2>
+    <h2 #actions_sec id="actions">{{ 'ACTION_LINES' | translate }}</h2>
 
     <ion-list>
-        <ion-item *ngFor="let action of actions" (click)="actionTapped($event, action)" (press)="actionPressed($event, action)" [ngClass]="{'grayed': action.hidden, 'hidden': action.hidden && ACTION_SHOWED }" text-wrap>
+        <ion-item tappable="" *ngFor="let action of actions" (click)="actionTapped($event, action)" (press)="actionPressed($event, action)" [ngClass]="{'grayed': action.hidden, 'hidden': action.hidden && ACTION_SHOWED }" text-wrap>
             <ion-thumbnail item-left>
-                <img class="icon" class="action-thumb" src="./assets/images/action{{ action.id + 1 }}.png"/>
+                <img class="icon action-thumb" src="./assets/images/action{{ action.id + 1 }}.png"/>
             </ion-thumbnail>
             <p class="action-name">{{ action.shortName }}</p>
         </ion-item>
     </ion-list>
     
-    <h2 id="goals">{{ 'SDGs' | translate}}</h2>
+    <h2 #goals_sec id="goals">{{ 'SDGs' | translate}}</h2>
     <ion-grid class="grid-full">
         <ion-row>
-            <ion-col width-25 *ngFor="let goal of goals" [ngClass]="{'grayed': goal.hidden, 'hidden': goal.hidden && GOAL_SHOWED }">
+            <ion-col tappable="" col-3 *ngFor="let goal of goals" [ngClass]="{'grayed': goal.hidden, 'hidden': goal.hidden && GOAL_SHOWED }">
                 <img src="./assets/images/goal{{ goal.id + 1}}.png" (click)="goalTapped($event, goal)" (press)="goalPressed($event, goal)"/>
             </ion-col>
         </ion-row>
