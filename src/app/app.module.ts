@@ -41,44 +41,6 @@ export class SentryErrorHandler implements ErrorHandler {
 }
 
 @NgModule({
-<<<<<<< HEAD
-    declarations: [
-        MyApp,
-        HomePage,
-        SDGPage,
-        SDGListPage,
-        ActionPage,
-        ActionListPage,
-        MatrixPage,
-        TabPage,
-        AboutPage,
-        ActionPopup,
-        Menu
-    ],
-    imports: [
-        IonicModule.forRoot(MyApp,{ mode:'md'}),
-        TranslateModule.forRoot({
-          provide: TranslateLoader,
-          useFactory: (createTranslateLoader),
-          deps: [Http]
-        })
-    ],
-    bootstrap: [IonicApp],
-    entryComponents: [
-        MyApp,
-        HomePage,
-        SDGPage,
-        SDGListPage,
-        ActionPage,
-        ActionListPage,
-        MatrixPage,
-        TabPage,
-        AboutPage,
-        ActionPopup,
-        Menu
-    ],
-    providers: [InAppBrowser,{provide: ErrorHandler, useClass: IonicErrorHandler}]
-=======
   declarations: [
     MyApp,
   ],
@@ -112,7 +74,6 @@ export class SentryErrorHandler implements ErrorHandler {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     { provide: ErrorHandler, useClass: SentryErrorHandler }
   ]
->>>>>>> master
 })
 export class AppModule {
 }

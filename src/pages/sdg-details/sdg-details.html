@@ -8,25 +8,6 @@
 </ion-header>
 
 <ion-content>
-<<<<<<< HEAD
-    <div class="container">
-        <div class="banner"  [ngStyle]="{ 'background-image': 'url(' + goal?.photoUrl + ')'}" ></div>
-        <h1 class="heading">{{ goal?.name }}</h1>
-    </div>
-    <div>
-        
-        <div [innerHTML]="goal?. desc" padding></div>
-        
-        <h2>{{ 'RELATED_ACTIONS' | translate}}</h2>
-        <ion-grid class="grid-full" padding>
-            <ion-row>
-                <ion-col *ngFor="let action of goal?.actions" width-33>
-                    <img tappable src="./assets/images/action{{ action + 1 }}.png" (click)="actionTapped($event, action)"/>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </div>
-=======
   <div class="container">
     <div class="banner" [ngStyle]="{ 'background-image': 'url(' + goal?.photoUrl + ')'}" ></div>
     <h1 class="heading">{{ goal?.name }}</h1>
@@ -46,5 +27,4 @@
       </ion-row>
     </ion-grid>
   </div>
->>>>>>> master
 </ion-content>

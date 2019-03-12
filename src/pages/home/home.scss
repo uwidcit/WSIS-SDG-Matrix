@@ -7,29 +7,6 @@ page-home {
     box-shadow: 4px 4px 0 color($colors, secDark, base);
   }
 
-<<<<<<< HEAD
-    h2 {
-        background: color($colors, secondary, base);
-        color: white;
-        padding: 8px;
-        margin-top: 0px;
-        margin-left: 16px;
-        margin-right: 16px;
-        box-shadow: 4px 4px 0px color($colors, secDark, base);
-    }
-    
-    ion-content {
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        z-index: -100;
-        background-image: url("../assets/images/banner.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-    }
-    
-=======
   p {
     color: white !important;
   }
@@ -55,5 +32,4 @@ page-home {
     filter: brightness(40%);
     -webkit-filter: brightness(40%); /* Safari */
   }
->>>>>>> master
 }
