@@ -7,7 +7,7 @@
 <ion-content class="vertical-align-content page-with-background">
   <!-- <div id="cover"></div> -->
   <div id="top_banner" style="width: 100%; text-align: center">
-    <img alt="10 year anniversary of WSIS" src="./assets/images/logo_alt_10yr.png"/>
+    <img alt="10 year anniversary of WSIS" src="assets/images/logo_alt_10yr.png"/>
   </div>
   
   
@@ -44,9 +44,7 @@
     </ion-row>
     <ion-row>
       <ion-col col-4>
-        <a href="">
-          <img alt="WSIS official logo" src="./assets/images/wsis_sdg_logo.png"/>
-        </a>
+        <img alt="WSIS official logo" src="./assets/images/wsis_sdg_logo.png"/>
       </ion-col>
       <ion-col>
         <p>{{ 'WSIS_FORUM_HOME_INFO' | translate}}</p>
@@ -79,21 +77,19 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <a (click)="showFacebook()" href="">
-            <img src="./assets/images/wsis-fb.jpg" alt="Go to Facebook. Facebook Icon displayed"/>
-          </a>
+          <img tappable src="./assets/images/wsis-fb.jpg"
+               (click)="showFacebook()"
+               alt="Go to Facebook. Facebook Icon displayed"/>
         </ion-col>
         <ion-col>
-          <a (click)="showTwitter()" href="">
-            <img src="./assets/images/wsis-twitter.jpg" alt="Go to Twitter. Twitter Icon displayed"/>
-          </a>
+          <img tappable src="./assets/images/wsis-twitter.jpg"
+               (click)="showTwitter()"
+               alt="Go to Twitter. Twitter Icon displayed"/>
         </ion-col>
-      </ion-row>
-      <ion-row>
         <ion-col>
-          <a (click)="showInstagram()" href="">
-            <img src="./assets/images/wsis-insta.jpg" alt="Go to Instragram. Instagram Icon displayed"/>
-          </a>
+          <img tappable src="./assets/images/wsis-insta.jpg"
+               (click)="showInstagram()"
+               alt="Go to Instragram. Instagram Icon displayed"/>
         </ion-col>
       </ion-row>
     </ion-grid>
