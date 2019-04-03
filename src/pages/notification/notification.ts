@@ -62,27 +62,23 @@ export class NotificationPage {
       } catch (e) {
         console.log(e);
       }
-      console.log(lastSeenTimestamp);
-
       let seenIndex = -1;
 
       // Process the messages received
       this.messages = recs.map((el, index) => {
         // since we know the records are sorted by date, we check if any dates are more recent than the last seen time
-        console.log(`Comparing ${el.date_created.toDate().getTime()} and ${lastSeenTimestamp}`);
         if (el.date_created.toDate().getTime() > lastSeenTimestamp) {
           seenIndex = index;
         }
         return el;
       });
-      console.log(`Seen is ${seenIndex}`);
       // split into seenMessages and unseenMessages messages
       this.unseenMessages = this.messages.slice(0, seenIndex + 1);
       this.seenMessages = this.messages.slice(seenIndex + 1, this.messages.length);
       // Update the last time seen to the database
       this.storage
         .set('last_time', this.messages[0].date_created.toDate().getTime())
-        .then(_ => console.log('Date updated'))
+        .then(_ => console.log('Date successfully updated'))
         .catch(err => console.error(err));
 
       loading.dismiss();

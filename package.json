@@ -50,7 +50,8 @@
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.4.0",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.26"
+    "zone.js": "0.8.26",
+    "cordova-ios": "4.5.5"
   },
   "optionalDependencies": {
     "cordova-ios": "4.5.5",
