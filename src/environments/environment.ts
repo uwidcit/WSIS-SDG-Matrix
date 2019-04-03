@@ -2,12 +2,17 @@
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
+// (NB as of 03-Apr-2019 this does not work as expected)
+
 export const environment = {
-  production: true,
+  production: false,
   use_service_worker: false,
-  google_analytics_id: '',
+  google_analytics_id: 'UA-132994026-1',
   use_tracking: false,
-  is_debug: true
+  is_debug: true,
+  release: "1.3.0",
+  runtime_envi: "staging",
+  sentry_dsn: "https://4852a8e4c6004ed29198042d6473dbe3@sentry.io/1370709"
 };
 
 export const firebase = {

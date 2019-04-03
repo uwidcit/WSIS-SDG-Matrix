@@ -24,8 +24,14 @@ import {AnalyticsService} from './analytics/analytics.service';
 import {FcmProvider} from '../providers/fcm/fcm';
 
 import {Device} from "@ionic-native/device";
+import {IonicStorageModule} from "@ionic/storage";
 
-Sentry.init({dsn: 'https://4852a8e4c6004ed29198042d6473dbe3@sentry.io/1370709'});
+// @ts-ignore
+Sentry.init({
+  dsn: environment.sentry_dsn,
+  release: environment.release,
+  environment: environment.runtime_envi,
+});
 
 @Injectable()
 export class SentryErrorHandler implements ErrorHandler {
@@ -46,6 +52,7 @@ export class SentryErrorHandler implements ErrorHandler {
   ],
   imports: [
     IonicModule.forRoot(MyApp, {preloadModules: true}),
+    IonicStorageModule.forRoot(),
     BrowserModule,
     // Import and initialise Firebase
     AngularFireModule.initializeApp(firebase),

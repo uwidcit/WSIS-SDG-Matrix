@@ -9,17 +9,59 @@
   <div style="width: 100%; text-align: center">
     <img alt="10 year anniversary of WSIS" src="./assets/images/logo_alt_10yr.png"/>
   </div>
-  <ion-list>
-    <ion-item *ngFor="let message of messages | async"
-              class="item item-block item-ios alert-type-{{message.category}}"
-              (click)="displayMessage(message)">
-      <h2>{{message.title}}</h2>
-      <p>
-        <em>{{message.message}}</em> <br>
+  
+  <div class="notification_section">
+    <h1>New Messages</h1>
+    
+    <div *ngIf="unseenMessages && unseenMessages.length > 0; else noNewMessages">
+      <ion-list>
+        <ion-item (click)="displayMessage(message)"
+                  *ngFor="let message of unseenMessages"
+                  class="item item-block item-ios alert-type-{{message.category}}">
+          <h2>{{message.title}}</h2>
+          <p>
+            <em>{{message.message}}</em> <br>
+          </p>
+          <p><span style="font-size: .7em">
+          {{message.date_created.toDate() | date:'long'}}
+        </span></p>
+        </ion-item>
+      </ion-list>
+    </div>
+    
+    <ng-template #noNewMessages>
+      <p class="info">
+        <ion-icon name="information-circle"></ion-icon>
+        No New Notifications
       </p>
-      <p><span style="font-size: .7em">
-        {{message.date_created.toDate() | date:'long'}}
-      </span></p>
-    </ion-item>
-  </ion-list>
+    
+    </ng-template>
+    
+    
+    <h1>Previous Messages</h1>
+    <div *ngIf="seenMessages && seenMessages.length > 0; else noMessages">
+      <ion-list>
+        <ion-item (click)="displayMessage(message)"
+                  *ngFor="let message of seenMessages"
+                  class="item item-block item-ios alert-type-{{message.category}}">
+          <h2>{{message.title}}</h2>
+          <p>
+            <em>{{message.message}}</em> <br>
+          </p>
+          <p><span style="font-size: .7em">
+          {{message.date_created.toDate() | date:'long'}}
+        </span></p>
+        </ion-item>
+      </ion-list>
+    </div>
+    
+    <ng-template #noMessages>
+      <p class="info">
+        <ion-icon name="information-circle"></ion-icon>
+        No Past Notifications
+      </p>
+    </ng-template>
+  </div>
+
+
 </ion-content>

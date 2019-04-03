@@ -20,15 +20,17 @@ page-notification {
     border-color: #fdd6d6;
   }
 
+  .notification_section {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
   h1 {
     background: color($colors, secondary, base);
     color: white;
     padding: 8px;
     margin-top: 0;
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-right: 4px;
     box-shadow: 4px 4px 0 color($colors, secDark, base);
   }
-
-
 }
