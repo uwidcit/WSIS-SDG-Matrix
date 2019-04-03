@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="14" id="uwi.dcit.ict4sdg" version="1.3.0" xmlns="http://www.w3.org/ns/widgets">
+<widget android-versionCode="15" id="uwi.dcit.ict4sdg" version="1.4.0" xmlns="http://www.w3.org/ns/widgets">
     <name>ICT4SDG</name>
     <description>The ICT4SDG application was developed to display linkages between the World Summit on the Information Society Action Lines and the United Nation's Sustainable Development Goals.</description>
     <author email="dcit.agrinett@gmail.com" href="http://www.sta.uwi.edu/agrinett/">AgrineTT</author>
-    <content src="index.html" />
+  <content original-src="index.html" src="http://192.168.1.12:8101"/>
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-intent href="http://*/*" />
@@ -93,6 +93,7 @@
     <plugin name="cordova-plugin-whitelist" spec="^1.3.1" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="cordova-sqlite-storage" spec="3.2.0" />
+  <allow-navigation href="http://192.168.1.12:8101" sessionid="05fca102"/>
     <engine name="android" spec="7.1.4" />
     <engine name="ios" spec="4.5.5" />
 </widget>

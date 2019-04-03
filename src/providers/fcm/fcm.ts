@@ -34,6 +34,7 @@ export class FcmProvider {
         if (!isGranted) {
           isGranted = await this.firebaseNative.grantPermission();
         }
+        if (!isGranted) console.log('Permission still not granted'); // TODO Send message to server
         // Retrieve the token to be able to know the device to be updated
         token = await this.firebaseNative.getToken();
       }

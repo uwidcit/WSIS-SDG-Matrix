@@ -3,8 +3,8 @@ export const environment = {
   use_service_worker: false,
   google_analytics_id: 'UA-132994026-1',
   use_tracking: true,
-  is_debug: true,
-  release: "1.3.0",
+  is_debug: false,
+  release: "1.4.0",
   runtime_envi: "prod",
   sentry_dsn: "https://4852a8e4c6004ed29198042d6473dbe3@sentry.io/1370709"
 };
