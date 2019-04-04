@@ -52,7 +52,7 @@ export class MyApp {
         console.log('Not a cordova supported environment');
       }
       // Setup configuration to keep app from closing unintentionally when hardward back button is selected
-      this.preventUnwantedTermination();
+      // this.preventUnwantedTermination();
     });
     // Placed outside as the platform.ready method may only be executed in ionic systems
     this.analytics.startTrackerWithId(environment.google_analytics_id);
@@ -65,6 +65,9 @@ export class MyApp {
 
   // Displays notification within the application when opened
   setupNotificationListener(){
+    // Attempt to launch the process to get the device token to prompt for permission
+    this.fcm.getToken();
+
     // if (this.is_debug) { console.log("Attempting to configure the notification listener"); }
     this.fcm.listenToNotifications().pipe(tap(msg => {
       // if (this.is_debug) { console.log("Notification received"); }
